@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>wp-portfolio</title>
+	<link rel="stylesheet" type="text/css" href="wp-portfolio.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css//all.min.css">
+</head>
+<body>
+	<header class="flex">
+		<div>
+			<h1>William Adejoh</h1>
+			<small>Web Devoloper & WordPress Designer</small>
+		</div>
+		
+		<nav>
+			<a href="index.html">Home</a><a href="wp-portfolio-about-page.html">About</a><a href="wp-portfolio-service-page.html">Services</a><a href="wp-portfolio-project-page.html">Project</a><a href="wp-portfolio-contact-page.html">Contact</a>
+		</nav>
+		<a href="https://wa.me/2348107839478?text=Hi%20William%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you" target="_blank" class="btn whatsapp"><i class="fa-brands fa-whatsapp"></i>Hire Me</a>
+	</header>
+	<div class="hero-profile-wrap">
+		<div class="hero-cover"></div>
+		<div class="hero-profile-content">
+			<img class="size-medium wp-image-62 aligncenter" src="file_000000004c9071f587c73650ccdf693e.jpg" alt="Adejoh" width="282" height="300" />
+			<h1> William Adejoh</h1>
+			<h3>Web Developer and WordPress Website Designer</h3>
+			<p>
+				Welcome to my portfolio website where i showcase my projects and skills. I build clean, responsive websites with WordPress and also develop custom website solutions using HTML, CSS, JavaScript, PHP, and MySQL for businesses and individuals.
+			</p>
+		</div>
+	</div>
+	<section>
+		<h2>About Me</h2>
+		<p>
+			I am an aspiring web Developer focused on building modern WordPress and custom websites. I learn more by Building, enjoy improving my skills daily by learning new technologies. <a href="wp-portfolio-about-page.html" target="_blank">More about me...</a>
+		</p>
+	</section>
+	<section>
+		<h2>My Services</h2>
+		<div class="services-grid">
+			<div class="services-card cards">
+				<h3>WordPress Website Design</h3>
+				<p>I create professional WordPress websites for businesses, brands, and individuals with clean layouts and       user-friendly design.</p>
+			</div>
+			<div class="services-card cards">
+				<h3>Responsive Website Design</h3>
+				<p>I build websites that adapt properly to phones, tablets, and desktop screens for a smooth user experience on all devices.</p>
+			</div>
+			<div class="services-card cards">
+				<h3>Custom Website Development</h3>
+				<p>I build custom website pages and layouts using HTML, CSS, and JavaScript for more flexibility beyond WordPress templates.</p>
+			</div>
+			<div class="services-card cards">
+				<h3>Website Maintenance &amp; Update</h3>
+				<p>I help keep websites updated by making content changes, fixing small issues, and maintaining smooth performance over time.</p>
+			</div>
+			<div class="services-card cards">
+				<h3>Basic Backend Development</h3>
+				<p>I use PHP and MySQL to create simple dynamic website features such as forms, data handling, and database-driven functionality.</p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2>Projects</h2>
+		<div class="project-grid">
+			<div class="project-card cards">
+				<h3>Project 1: Personal Portfolio Website</h3>
+				<p>Built with WordPress (Astra Theme), responsive design. Includes About, Services, and Contact section.</p>
+				<span class="tech">WordPress / Astra  &nbsp;</span>
+				<div class="project-links">
+					<a href="#" class="project-btn view-btn" target="_blank">View Project &rarr;</a>
+					<a href="https://github.com/willie-Jo/my-profile-page" target="_blank" class="project-btn code-btn">View Code &rarr;</a>
+				</div>
+			</div>
+			<div class="project-card cards">
+				<h3>Project 2: Business Website Concept</h3>
+				<p>WordPress website designed for a service-based business with clean homepage, service section and contact form.</p>
+				<span class="tech">WordPress  &nbsp;</span>
+				<div class="project-links">
+					<a href="#" class="project-btn view-btn" target="_blank">View Project &rarr;</a>
+					<a href="https://github.com/willie-Jo/my-profile-page" target="_blank" class="project-btn code-btn">View Code &rarr;</a>
+				</div>
+			</div>
+			<div class="project-card cards">
+				<h3>Project 3: Blog Website Concept</h3>
+				<p>A simple blog layout demonstrating categories, posts, and content structure using WordPress.</p>
+				<span class="tech">WordPress  &nbsp;</span>
+				<div class="project-links">
+					<a href="#" class="project-btn view-btn" target="_blank">View Project &rarr;</a>
+					<a href="https://github.com/willie-Jo/my-profile-page" target="_blank" class="project-btn code-btn">View Code &rarr;</a>
+				</div>
+			</div>
+			<div class="project-card cards">
+				<p>I absolutely have more project if you're interested in seeing some more works. Check them out below &darr;</p>
+				<a href="wp-portfolio-project-page.html" class="see-more" target="_blank">See more &rarr;</a>
+			</div>
+		</div>
+	</section>
+	<section>
+		<h2>Contact Me</h2>
+		<div>
+			Interested in working together?
+
+			I help businesses and individual create professional websites using WordPress and modern web technologies. Feel free to contact me through the Contact page and i will respond as soon as possible.
+		</div>
+
+		<div>Visit my <a href="wp-portfolio-contact-page.html">Contact page</a> and send me a message.</div>
+	</section>
+
+	<button id="backToTop">&uarr; Top</button>
+
+	<footer>
+		<small>
+			Copyright © 2026 TechFix. All Rights Reserved. <br>
+			&nbsp;&nbsp;Designed & Developed by William Adejoh.
+		</small>
+	</footer>
+
+	<script type="text/javascript">
+		const btn = document.getElementById("backToTop");
+
+		// Show button when user scrolls 300px down
+		window.onscroll = function() {
+			if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+				btn.style.display = "block";
+			} else {
+				btn.style.display = "none";
+			}
+		};
+
+		// Scroll to top smoothly when clicked
+		btn.onclick = function() {
+			window.scrollTo({top: 0, behavior: 'smooth'});
+		};
+	</script>
+</body>
+</html>
