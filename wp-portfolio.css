@@ -79,7 +79,7 @@ section {
     border-radius: var(--radius);
     padding: 20px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* only animate these 2 = fast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* fast animate */
 }
 .cards:hover {
     transform: translateY(-4px);
