@@ -6,19 +6,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>wp-portfolio</title>
 	<link rel="stylesheet" type="text/css" href="wp-portfolio.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css//all.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-	<header class="flex">
-		<div>
+	<header class="site-header">
+		<div class="logo">
 			<h1>William Adejoh</h1>
 			<small>FrontEnd & WordPress Web Devoloper</small>
 		</div>
 		
-		<nav>
-			<a href="index.html">Home</a><a href="wp-portfolio-about-page.html">About</a><a href="wp-portfolio-service-page.html">Services</a><a href="wp-portfolio-project-page.html">Project</a><a href="wp-portfolio-contact-page.html">Contact</a>
+		<nav class="main-nav" id="mainNav">
+			<a href="index.html" class="active">Home</a><a href="wp-portfolio-about-page.html">About</a><a href="wp-portfolio-service-page.html">Services</a><a href="wp-portfolio-project-page.html">Project</a><a href="wp-portfolio-contact-page.html">Contact</a>
 		</nav>
-		<a href="https://wa.me/2348107839478?text=Hi%20William%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you" target="_blank" class="btn whatsapp"><i class="fa-brands fa-whatsapp"></i>Hire Me</a>
+
+		<!-- Hambuger Button -->
+		<button class="hamburger" aria-label="Toggle Menu" onclick="toggleMenu(this)">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		
+		<a href="https://wa.me/2348107839478?text=Hi%20William%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you" target="_blank" class="btn whatsapp" id="whatsappBtn"><i class="fa-brands fa-whatsapp"></i>Hire Me</a>
 	</header>
 	<main>
 		<div class="hero-profile-wrap">
@@ -133,22 +141,6 @@
 			&nbsp;&nbsp;Designed & Developed.
 		</small>
 	</footer>
-	<script type="text/javascript">
-		const btn = document.getElementById("backToTop");
-
-		// Show button when user scrolls 300px down
-		window.onscroll = function() {
-			if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-				btn.style.display = "block";
-			} else {
-				btn.style.display = "none";
-			}
-		};
-
-		// Scroll to top smoothly when clicked
-		btn.onclick = function() {
-			window.scrollTo({top: 0, behavior: 'smooth'});
-		};
-	</script>
+	<script type="text/javascript" src="portfolio.js"></script>
 </body>
 </html>
