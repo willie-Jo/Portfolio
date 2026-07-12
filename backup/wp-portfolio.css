@@ -30,7 +30,6 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    padding-top: 70px;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -82,6 +81,62 @@ header.site-header {
     line-height: 1.2;
 }
 .logo small { color: #cdb5e0; }
+
+/* Desktop Nav */
+#mainNav {
+    display: flex;
+    gap: 28px;
+}
+#mainNav a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #cbd5e0;
+    font-weight: 500;
+}
+#mainNav a:hover,
+#mainNav a.active {
+    color: var(--primary);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s ease;
+    transform-origin: center;
+}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+
+/* ====== WHATSAPP BUTTON ====== */
+#whatsappBtn {
+    background: var(--whatsapp);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+    animation: bounce 2s ease-in-out infinite; /* bounce everywhere */
+}
+#whatsappBtn:hover { background: var(--whatsapp-dark); animation: none; transform: scale(1.05); }
+
+/* WhatsApp bounce animation */
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
 /* ====== CARDS & GRIDS ====== */
 .cards {
@@ -222,3 +277,57 @@ footer-social a:hover { color: #4da6ff; text-decoration: underline; }
     z-index: 1000;
 }
 #backToTop:hover { background: var(--primary-dark); transform: scale(1.1); }
+
+/* ====== RESPONSIVE: TABLET 768px+ ====== */
+@media (min-width: 768px) {
+    section { padding: 60px 40px; }
+    .hero-cover { height: 240px; }
+    .hero-profile-content img { width: 180px; height: 180px; }
+    .services-grid, .project-grid, .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ====== RESPONSIVE: MOBILE 900px and below ====== */
+@media (max-width: 900px) {
+    .hamburger { display: flex; }
+
+    /* Mobile Dropdown Nav */
+    #mainNav {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--dark);
+        padding: 10px 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        z-index: 9998;
+    }
+    #mainNav.active { display: flex; }
+    #mainNav a { padding: 14px 20px; border-bottom: 1px solid #333; }
+
+    /* Hide header whatsapp, show fixed one */
+    #whatsappBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99999;
+        padding: 14px 18px;
+    }
+}
+
+/* ====== RESPONSIVE: DESKTOP 901px+ ====== */
+@media (min-width: 901px) {
+    header.site-header {
+        align-items: flex-end; /* push nav down */
+        padding-bottom: 18px;
+    }
+    #mainNav {
+        margin-right: 25px; /* space before whatsapp */
+    }
+    #whatsappBtn { position: static; } /* in header flow */
+    .services-grid, .project-grid { gap: 24px; }
+}
