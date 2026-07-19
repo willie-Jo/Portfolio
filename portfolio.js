@@ -1,7 +1,7 @@
 // Toggle Mobile Menu
 function toggleMenu(btn) {
+    btn.classList.toggle('active');
     document.getElementById('mainNav').classList.toggle('active');
-    /*btn.classList.toggle('active');*/
 }
 
 // Close menu when a link is click
@@ -52,7 +52,20 @@ document.querySelectorAll('.main-nav a').forEach(anchor => {
     });
 });
 
-// ===== Poject Filters 
+// Avatar Lightbox
+const modal = document.getElementById("avatarModal");
+const modalImg = document.getElementById("modalImg");
+const avatarLink = document.querySelector(".avatar-link");
+
+avatarLink.onclick = function(e) {
+    e.preventDefault();  // stop opening new tab
+    modal.style.display = "block";
+    modalImg.src = this.href; // uses the large image
+}
+document.querySelector(".close").onclick = () => modal.style.display = "none";
+modal.onclick =  (e) => { if(e.target == modal) modal.style.display = "none";}
+
+// Poject Filters 
 
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
