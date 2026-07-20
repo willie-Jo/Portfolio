@@ -1,0 +1,47 @@
+/* ===== GLASS CALCULATOR ===== */
+:root {
+    --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);   /*Purple gradient background */
+    --glass: rgba(255, 255, 255, 0.15);
+    --text: #fff;
+    --btn: rgba(255, 255, 255, 0.1);
+  }
+  body.dark {
+    --bg: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    --glass: rgba(0, 0, 0, 0.3);
+  }
+  
+  * {box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif;}
+  body {
+    display: grid; place-items: center; min-height: 100vh;
+    background: var(--bg); transition: 0.3s;
+  }
+  
+  .calculator {
+    width: 90%; max-width: 350px; padding: 25px;
+    background: var(--glass); backdrop-filter: blur(15px);
+    border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .theme-toggle {text-align: right; margin-bottom: 10px;}
+  #themeBtn {background: none; border: none; font-size: 20px; cursor: pointer;}
+  
+  .display {
+    background: rgba(0,0,0,0.2); padding: 15px; border-radius: 12px; margin-bottom: 20px;
+  }
+  #history {font-size: 14px; color: rgba(255,255,255,0.7); height: 20px; text-align: right;}
+  #result {
+    width: 100%; background: none; border: none; color: var(--text);
+    font-size: 32px; text-align: right; outline: none;
+  }
+  
+  .buttons {display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;}
+  .btn {
+    padding: 20px; font-size: 18px; border: none; border-radius: 12px;
+    background: var(--btn); color: var(--text); cursor: pointer;
+    transition: all 0.15s ease; backdrop-filter: blur(5px);
+  }
+  .btn:hover {transform: scale(1.05); background: rgba(255,255,255,0.2);}
+  .btn:active {transform: scale(0.95);}
+  .operator {background: rgba(0, 115, 170, 0.5);}
+  .equals {background: var(--primary, #0073aa);}
+  .span-2 {grid-column: span 2;}
