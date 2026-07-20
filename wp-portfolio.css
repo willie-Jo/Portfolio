@@ -242,9 +242,22 @@ header.site-header{
     border-radius: 6px;
 }
 .project-links{display: grid; grid-template-columns: 1fr 1fr; gap: 10px;}
-.project-btn{padding: 10px; text-align: center; border-radius: 8px; font-weight: 600; font-size: 14px;}
-.btn{background: var(--primary); color: #fff;}
-.btn:hover{background: var(--primary-dark); transform: scale(1.05);}
+.project-btn{padding: 10px 18px; text-align: center; border-radius: 8px; font-weight: 600; font-size: 14px;}
+.btn-primary{
+    background: rgba(255,255,255,0.1); 
+    color: var(--text);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover{
+    background: rgba(255,255,255,0.25); 
+    transform: scale(1.05); 
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+    transform: translateY(-2px);
+}
 .code-btn{background: var(--light); color: var(--text);}
 .code-btn:hover{background: #e5e7eb; transform: scale(1.05);}
 
