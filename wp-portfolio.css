@@ -60,8 +60,17 @@ header.site-header{
 .logo h1{font-weight: 700; font-size: clamp(20px, 4vw, 28px); margin: 0;}
 .main-nav{display: flex; gap: 25px;}
 .site-header a{font-weight: 500; padding: 8px 0;}
-.main-nav a:hover{color: var(--primary-dark);}
+.main-nav a:hover, .hire-me-btn:hover{color: var(--primary-dark);}
 .main-nav a.active{color: var(--primary-dark); border-bottom: 2px solid var(--primary-dark);}
+.hire-me-btn{
+    display: block;
+    background-color: var(--whatsapp);
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
 
 /* Mobile Nav */
 .hamburger{
@@ -230,7 +239,7 @@ header.site-header{
 }
 .project-card:hover img{transform: scale(1.05);}  /* zooms image 5% */
 
-.project-info{flex-grow: 1;}  /* Pushes buttons to bottom */
+.project-info{flex-grow: 1; margin-top: 12px;}  /* Pushes buttons to bottom */
 
 .tech{
     display: inline-block;
@@ -256,7 +265,6 @@ header.site-header{
     transform: scale(1.05); 
     border: 1px solid rgba(255,255,255,0.4);
     box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
-    transform: translateY(-2px);
 }
 .code-btn{background: var(--light); color: var(--text);}
 .code-btn:hover{background: #e5e7eb; transform: scale(1.05);}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="CONTENT-TYPE">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Facebook - Log in  or Sign upPage</title>
+	<style type="text/css">
+		*{margin: 0; padding: 0; box-sizing: border-box;}
+		body {
+			background-color: #f0f2f5;
+			display: flex;
+			justify-content: center;
+			font-family: Arial, sans-serif;
+			align-items: center;
+			min-height: 100vh;
+			padding: 20px;
+			gap: 60px;
+		}
+		
+		.left-section{max-width: 500px; margin: 0 20px 80px 0; font-family: Arial, Helvetica, sans-serif;}
+		.left-section h1{color: #1877f2; font-size: 65px; font-weight: 700; margin-bottom: 10px;}
+		.left-section p{color: #64748b; font-size: 1.05em; line-height: 1.3; font-weight: bold;}
+		
+		.form-card {
+			width: 396px;
+			margin-left: 65px;
+			padding: 10px 20px 10px;
+			border-radius: 8px;
+			background: #fff;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
+			font-family: Arial, sans-serif;
+		}
+		form {
+			display: flex;
+			gap: 12px;
+			flex-direction: column;
+			margin-bottom: 20px;
+			padding-top: 16px;
+		}
+		form input {
+			width: 100%;
+			padding: 14px 16px;
+			border: 1px solid #d4d7dd;
+			border-radius: 6px;
+			font-size: 17px;
+			transition: 0.2s;
+		}
+		form input:focus{outline: none; border-color: #1877f2; box-shadow: 0 0 0 2px #e7f3ff;}
+		.remember{
+			display: flex; 
+			align-items: center;
+			gap: 8px;
+			font-size: 14px;
+			color: #4b4c4f;
+		}
+		.remember input{width: 16px; height: 16px;}
+		#login-btn {
+			background-color: #1877f2;
+			color: white;
+			padding: 12px;
+			border: none;
+			border-radius: 6px;
+			font-size: 20px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: 0.2s;
+		}
+		#login-btn:hover{background-color: #166fe5;}
+		
+		.forgot{text-align: center; color: #1877f2; text-decoration: none; font-size: 14px; margin: 5px 0;}
+		.forgot:hover{text-decoration: underline;}
+		.divider{border-bottom: 1px solid #dadde1; margin: 8px 0;}
+		
+		#signup-btn{
+			display: block;
+			background-color: #42b72a;
+			color: white;
+			font-size: 17px;
+			font-weight: bold;
+			margin: 0 auto;
+			padding: 12px 16px;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+			transition: 0.2s;
+		}
+		#signup-btn:hover{background-color: #36a420;}
+		
+		@media (max-width: 900px) {
+			body{flex-direction: column; gap: 30px; padding: 20px 20px;}
+			.left-section{text-align: center; margin: 0 0 2px 0;}
+			.left-section h1{font-size: 50px;}
+			.form-card{width: 100%; max-width: 396px; margin: 0; padding-top: 8px;}
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="left-section">
+		<h1>FACEBOOK</h1>
+		<p>Welcome to Facebook, connect and share with the people in your life.</p>
+	</div>
+	<div class="form-card">
+		<form action="login.php" method="post">
+			<input type="text" id="uep" placeholder="Email or phone number" required>
+			<input type="password" id="password" placeholder="Enter Password" required>
+			<button type="submit" id="login-btn">Log In</button>
+			<div class="remember">
+				<input type="checkbox" name="checkbox" id="remember">
+				<label for="remember"><small>Remember username and password</small></label>
+			</div>
+			<a href="#" class="forgot">Forgotten password?</a>
+			<div class="divider"></div>
+		</form>
+		<button id="signup-btn">Create New Account</button>
+	</div>
+</body>
+</html>
