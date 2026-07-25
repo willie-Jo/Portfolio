@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Feedback Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Developer Feedback Survey</h1>
+            <p>Help me improve my portfolio and services. Takes 2 minutes.</p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label>How did you find my portfolio?</label>
+                <select id="source" required>
+                    <option value="">Select an option</option>
+                    <option value="github">GitHub</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="referral">Referral</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Which project impressed you most?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="favorite" value="landing"> Landing Page</label>
+                    <label><input type="radio" name="favorite" value="todo"> To-Do App</label>
+                    <label><input type="radio" name="favorite" value="product"> Product cards</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>What skills do you want to see next? <small>Check all that apply</small></label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="react"> Landing Page</label>
+                    <label><input type="checkbox" value="wordpress"> To-Do App</label>
+                    <label><input type="checkbox" value="api"> Product cards</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" rows="4" Placeholder="Your feedback..."></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -62,7 +62,7 @@ header.site-header{
     font-weight:700;
     font-size:clamp(20px,4vw,28px);
     margin:5px 5px;
-    padding:10px 8px;
+    padding:10px 6px;
     border:2.8px solid var(--border);
     border-radius:50%
 }
@@ -316,6 +316,9 @@ footer{background:var(--text); text-align:center; padding:25px 20px; font-size:1
 
 @media(max-width:768px){
     main{margin:10px}
+    .logo{display:flex; flex-direction:column}
+    .logo h1{margin:0; width:fit-content}
+    .logo small{margin-top:6px}
     .main-nav{
         display:none; flex-direction:column; position:absolute;
         top:60px; right:0; width:25%; background:var(--text) /*padding: 4px 0 4px;*/

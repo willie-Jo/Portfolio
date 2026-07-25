@@ -22,6 +22,7 @@ I'm actively learning Bootstrap and just getting started with React.
 | [Ink Landing Page](./projects/Ink-Landing-Page/) | Responsive Template with CSS-only auto carousel | HTML, CSS |
 | [Calculator App](./projects/Calculator-project/) | Functional calculator with keyboard support | HTML, CSS, JavaScript |
 | [To-Do List App](./projects/ToDo-List/) | Task manager with CRUD, Local Storage, filters, and Dark/Light Mode | HTML, CSS, JavaScript |
+| [Survey](./projects/Survey-Form/) | Accessible feedback form with validation | HTML, CSS |
 
 ## PHP, MySQL & WordPress
 *Coming soon*
