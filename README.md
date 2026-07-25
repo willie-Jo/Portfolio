@@ -16,11 +16,12 @@ I'm actively learning Bootstrap and just getting started with React.
 ## HTML, CSS & JavaScript Projects
 
 | Project | Description | Tech |
-| --- | --- | --- |
+| ------------ | ------------ | ------------ |
 | [Facebook Login Clone](./projects/FacebookClone/) | Responsive Facebook Login UI | HTML, CSS |
 | [SaaS Product Landing Page](./projects/SaaS-Product-Landing-Page/) | Modern SaaS Landing page| HTML, CSS |
 | [Ink Landing Page](./projects/Ink-Landing-Page/) | Responsive Template with CSS-only auto carousel | HTML, CSS |
 | [Calculator App](./projects/Calculator-project/) | Functional calculator with keyboard support | HTML, CSS, JavaScript |
+| [To-Do List App](./projects/ToDo-List/) | Task manager with CRUD, Local Storage, filters, and Dark/Light Mode | HTML, CSS, JavaScript |
 
 ## PHP, MySQL & WordPress
 *Coming soon*

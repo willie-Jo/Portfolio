@@ -1,3 +1,10 @@
+/* =======================================================
+   Author: William Adejoh
+   Project: SaaS Product Landing Page
+   Minified + Clean + Responsive + Glass cards
+======================================================== */
+
+/* ====== Base & Variables ====== */
 :root{
     --bg: #0f0f1a;
     --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -20,76 +27,76 @@ body{
 
 /* HERO SECTION */
 .hero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 120px 20px;
-    min-height: 80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+    min-height:80vh;
 }
 .hero h1{
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, #fff, #b4b4c8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size:3rem;
+    font-weight:800;
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#fff,#b4b4c8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent
 }
-.hero p{font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 600px;}
+.hero p{font-size:1.2rem; color:var(--text-secondary); margin-bottom:40px; max-width:600px}
 
 /* Glass Button */
 .btn-primary{
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--text);
-    padding: 14px 32px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    display: inline-block;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.2);
+    color:var(--text);
+    padding:14px 32px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:1rem;
+    transition:all 0.3s ease;
+    display:inline-block
 }
 .btn-primary:hover{
-    background: rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
-    transform: translateY(-3px);
+    background:rgba(255,255,255,0.25);
+    border:1px solid rgba(255,255,255,0.4);
+    box-shadow:0 0 30px rgba(102,126,234,0.6);
+    transform:translateY(-3px)
 }
 
 /* Features section */
 .features{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 80px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+    padding:80px 40px;
+    max-width:1200px;
+    margin:0 auto
 }
 
 /* Glass cards */
-.feature-card{
-    background: var(--card);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 16px;
-    transition: all 0.3s ease;
+.features-card{
+    background:var(--card);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255, 255, 255, 0.1);
+    padding:30px;
+    border-radius:16px;
+    transition:all 0.3s ease
 }
-.feature-card:hover{
-    transform: translateY(-5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+.features-card:hover{
+    transform:translateY(-5px);
+    border:1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:0 10px 40px rgba(0, 0, 0, 0.3)
 }
-.feature-card h3{font-size: 1.5rem; margin-bottom: 10px;}
-.feature-card p{color: var(--text-secondary);}
+.features-card h3{font-size:1.5rem; margin-bottom:10px}
+.features-card p{color:var(--text-secondary)}
 
 /* MOBILE */
-@media (max-width: 768px){
-    .hero h1{font-size: 2rem;}
-    .features{padding: 40px 20px;}
+@media (max-width:768px){
+    .hero h1{font-size:2rem}
+    .features{padding:40px 20px}
 }

@@ -1,7 +1,7 @@
 /* =======================================================
    Author: William Adejoh
    Project: Ink - Team Collaboration Landing Page
-   v1.0 - Cleaned & Responsive
+   v1.0 - Minified + Clean + Responsive
 ======================================================== */
 
 /* ======= 1. BASE & VARIABLES ======= */
@@ -9,11 +9,16 @@
 	--bg:#709b90; --nav:#5f4b44; --accent:#cc6b5a;
 	--card:rgba(255,255,255,.95); --text:#1c1e21; --white:#fff;
 	--border:#ddd; --max-width:1350px;
-	--side-padding:clamp(12px,2vw,24px); /* Responsive side gaps */
+	--side-padding:clamp(12px,2vw,24px) /* Responsive side gaps */
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
-body{background:var(--bg);font-family:Helvetica,Arial,sans-serif;color:var(--text);line-height:1.6;overflow-x:hidden}
+body{background:var(--bg);
+	font-family:Helvetica,Arial,sans-serif;
+	color:var(--text);
+	line-height:1.6;
+	overflow-x:hidden
+}
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
 
@@ -33,10 +38,10 @@ header{
 	box-shadow:0 2px 10px rgba(0,0,0,.1);
 	z-index:1000
 }
-.page-logo{font-weight:700;font-size:clamp(20px,4vw,28px)}
+.page-logo{font-weight:700; font-size:clamp(20px,4vw,28px)}
 nav{position:relative}
-nav ul{display:flex;justify-content:center;margin-left:12%;gap:25px;list-style:none}
-li a{display:block;padding:8px 0;color:var(--white);font-weight:500;transition:.2s}
+nav ul{display:flex; justify-content:center; margin-left:12%; gap:25px; list-style:none}
+li a{display:block; padding:8px 0; color:var(--white); font-weight:500; transition:.2s}
 li a:hover{color:var(--nav)}
 
 /* Dropdown - centered under parent link */
@@ -56,16 +61,16 @@ li a:hover{color:var(--nav)}
 	white-space:nowrap
 }
 .dropdown:hover .dropdown-content{display:block}
-.dropdown-content a{padding:8px 10px;font-size:.9rem;display:block}
+.dropdown-content a{padding:8px 10px; font-size:.9rem; display:block}
 .dropdown-content a:hover{background:var(--accent)}
 
 /* Hamburger */
-.hamburger{display:flex;flex-direction:column;gap:5px;background:0;border:0;cursor:default;justify-self:end}
-.hamburger span{width:24px;height:3px;background:#fff}
+.hamburger{display:flex; flex-direction:column; gap:5px; background:0; border:0; cursor:default; justify-self:end}
+.hamburger span{width:24px; height:3px; background:#fff}
 
 /* ======= 3. LAYOUT & SECTIONS ======= */
-.main{display:flex;flex-direction:column}
-.container{max-width:var(--max-width);margin:0 auto;padding:0 var(--side-padding)}
+.main{display:flex; flex-direction:column}
+.container{max-width:var(--max-width); margin:0 auto; padding:0 var(--side-padding)}
 
 /* Hero Banner */
 .hero{
@@ -80,7 +85,7 @@ li a:hover{color:var(--nav)}
 	background-position:center;
 	color:var(--white)
 }
-.hero h2{font-size:clamp(2rem,5vw,3rem);margin-top:24px}
+.hero h2{font-size:clamp(2rem,5vw,3rem); margin-top:24px}
 .hero a{
 	display:inline-block;
 	margin-top:26px;
@@ -91,12 +96,12 @@ li a:hover{color:var(--nav)}
 	font-weight:700;
 	transition:.2s
 }
-.hero a:hover{background:#b85a4a;transform:translateY(-2px)}
+.hero a:hover{background:#b85a4a; transform:translateY(-2px)}
 
 /* Section Grids */
-.section-top{display:grid;grid-template-columns:3fr 1fr;gap:25px}
-.section-middle{padding:30px;border:1px solid var(--border);border-radius:8px;background:var(--card)}
-.section-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.section-top{display:grid; grid-template-columns:3fr 1fr; gap:25px}
+.section-middle{padding:30px; border:1px solid var(--border); border-radius:8px; background:var(--card)}
+.section-bottom{display:grid; grid-template-columns:repeat(3,1fr); gap:25px}
 
 /* ======= 4. COMPONENTS ======= */
 /* Carousel  - auto slide*/
@@ -111,7 +116,7 @@ li a:hover{color:var(--nav)}
 .slides{
 	display:flex;
 	width:300%;  /* 3 slides x 100% */
-	animation: slideShow 9s infinite;  /* 3 slides 3s each */
+	animation: slideShow 9s infinite  /* 3 slides 3s each */
 }
 .slide{
 	width:33.333%;
@@ -125,14 +130,14 @@ li a:hover{color:var(--nav)}
 
 /* Keyframes: hold 3s on each slide, then slides */
 @keyframes slideShow {
-	0% {transform:translateX(0%);}
-	33%{transform:translateX(0%);}
-	33.33%{transform:translateX(-33.333%);}
-	66%{transform:translateX(-33.333%);}
-	66.66%{transform:translateX(-66.666%);}
-	100%{transform:translateX(-66.666%);}
+	0% {transform:translateX(0%)}
+	33%{transform:translateX(0%)}
+	33.33%{transform:translateX(-33.333%)}
+	66%{transform:translateX(-33.333%)}
+	66.66%{transform:translateX(-66.666%)}
+	100%{transform:translateX(-66.666%)}
 }
-.arrow, .dots{pointer-events:none;opacity:0.7;}
+.arrow, .dots{pointer-events:none;opacity:0.7}
 .arrow{
 	position:absolute;
 	top:50%;
@@ -146,24 +151,34 @@ li a:hover{color:var(--nav)}
 	border-radius:50%
 }
 .prev{left:15px}.next{right:15px}
-.dots{display:flex;gap:10px;position:absolute;bottom:15px;left:50%;transform:translateX(-50%)}
-.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.5)}
+.dots{display:flex; gap:10px; position:absolute; bottom:15px; left:50%; transform:translateX(-50%)}
+.dot{width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.5)}
 .dot.active{background:#fff}
 
 /* Sidebar + Cards - grouped shared styles */
-aside,.card{padding:20px;border:1px solid var(--border);border-radius:8px;background:var(--card)}
+aside,.card{padding:20px; border:1px solid var(--border); border-radius:8px; background:var(--card)}
 aside h4{margin-bottom:10px}
-aside small{display:block;padding:8px 0;border-bottom:1px solid var(--border)}
+aside small{display:block; padding:8px 0; border-bottom:1px solid var(--border)}
 aside small:last-child{border:0}
 .card{box-shadow:0 4px 15px rgba(0,0,0,.1)}
-.first-card,.third-card{display:grid;grid-template-rows:150px 1fr;gap:15px}
-.grey{background:#ccc;border-radius:8px}
+.first-card,.third-card{display:grid; grid-template-rows:150px 1fr; gap:15px}
+.grey{background:#ccc; border-radius:8px}
 
 /* ======= 5. FOOTER ======= */
-footer{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding:30px var(--side-padding);background:var(--nav);color:var(--white);font-size:.9rem}
-footer h5{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:10px}
-.socials{display:flex;gap:15px}
-.socials svg{width:22px;height:22px;fill:#fff;transition:.2s}
+footer{
+	display:flex;
+	justify-content:space-between;
+	align-items:flex-start;
+	flex-wrap:wrap;
+	gap:30px;
+	padding:30px var(--side-padding);
+	background:var(--nav);
+	color:var(--white);
+	font-size:.9rem
+}
+footer h5{font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:10px}
+.socials{display:flex; gap:15px}
+.socials svg{width:22px; height:22px; fill:#fff; transition:.2s}
 .socials svg:hover{fill:var(--accent)}
 
 /* ======= 6. RESPONSIVE ======= */
@@ -172,7 +187,7 @@ footer h5{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:10
 	header{grid-template-columns:auto 1fr auto}
 	
 	/* Stack all sections + align widths */
-	.section-top,.section-middle,.section-bottom{grid-template-columns:1fr;width:100%}
+	.section-top,.section-middle,.section-bottom{grid-template-columns:1fr; width:100%}
 	.section-top{gap:25px}
 	
 	/* Reset margins for alignment */
@@ -180,6 +195,6 @@ footer h5{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:10
 	.carousel-slider,aside{width:100%}
 	
 	.container{padding:0 var(--side-padding)}
-	.hero{height:350px;padding-bottom:60px}
-	footer{flex-direction:column;text-align:center;align-items:center}
+	.hero{height:350px; padding-bottom:60px}
+	footer{flex-direction:column; text-align:center; align-items:center}
 }
