@@ -23,6 +23,7 @@ I'm actively learning Bootstrap and just getting started with React.
 | [Calculator App](./projects/Calculator-project/) | Functional calculator with keyboard support | HTML, CSS, JavaScript |
 | [To-Do List App](./projects/ToDo-List/) | Task manager with CRUD, Local Storage, filters, and Dark/Light Mode | HTML, CSS, JavaScript |
 | [Survey](./projects/Survey-Form/) | Accessible feedback form with validation | HTML, CSS |
+| [Weather App](./projects/Weather%20App/index.html) | Real-time weather data using OpenWeather API | HTML, CSS, JavaScript, API |
 
 ## PHP, MySQL & WordPress
 *Coming soon*

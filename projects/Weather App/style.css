@@ -1,0 +1,49 @@
+/*
+File: style.css
+Description: Styles for the Weather App. Clean card layout with gradient bg.
+*/
+
+:root{--primary:#4f46e5; --bg:linear-gradient(135deg,#667eea 0%,#764ba2 100%); --card:#fff}
+
+*{margin:0; padding:0; box-sizing:border-box}
+
+body{
+    font-family:system-ui,sans-serif;
+    background:var(--bg);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px
+}
+
+.app-container{
+    background:var(--card);
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.2);
+    width:100%;
+    max-width:400px;
+    text-align:center
+}
+
+h1{color:var(--primary); margin-bottom:5px}
+.subtitle{color:#666; margin-bottom:20px}
+
+.search-box{display:flex; gap: 10px; margin-bottom:20px}
+.search-box input{flex:1; padding:12px; border:2px solid #ddd; border-radius:8px; font-size:16px}
+.search-box button{
+    padding:12px 20px;
+    background:var(--primary);
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer
+}
+.search-box button:hover{opacity:0.9}
+
+.weather-box img{width:100px; margin:10px 0}
+#temperature{font-size:48px; font-weight:700; color:var(--primary)}
+.details{display:flex; justify-content:space-around; margin-top:15px}
+.error{color:red; font-weight:600}
