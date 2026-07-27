@@ -1,0 +1,113 @@
+/* ========== GLOBAL RESET ========== */
+* {margin:0; padding:0; box-sizing:border-box}
+
+body {
+    font-family:'Segoe UI', system-ui, sans-serif;
+    background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px
+}
+
+/* ========== SLIDER CONTAINER ========== */
+.slider-container {
+    background:#fff;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.3);
+    width:100%;
+    max-width:800px; /* Max width for desktop */
+    text-align:center
+}
+
+.slider-container h1{margin-bottom:20px; color:#4f46e5}
+
+/* ========== SLIDER WRAPPER ========== */
+.slider{
+    position:relative;    /* So buttons can be positioned absolute inside */
+    width:100%;
+    overflow:hidden;      /* Hides images that are off-screen */
+    border-radius:12px;
+    aspect-ratio:16/9     /* Keeps images 16:9 ratio on all screens */
+}
+
+/* ========== SLIDES TRACK ========== */
+.slides{
+    display:flex;                               /* Puts all images in a row */
+    transition:transform 0.5s ease-in-out;      /* Smooth slide animation */
+    height:100%;
+}
+
+.slides img{
+    width:100%;              /* Each image takes full width of slider */
+    height:100%;
+    object-fit:cover;        /* Prevents image stretching */
+    flex-shrink:0            /* Prevents images from squishing */
+}
+
+/* ========== NAVIGATION BUTTONS ========== */
+.prev, .next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);          /* Center vertically */
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:24px;
+    padding:10px 15px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:background 0.3s;
+    z-index:10;                          /* Keep buttons above images */
+}
+
+.prev:hover, .next:hover{background:rgba(0,0,0,0.8)}
+
+.prev{left:15px}
+.next{right:15px}
+
+/* ========== Caption Box ========== */
+.caption-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:15px;
+    padding:12px;
+    background:#f3f4f6;
+    border-radius:8px;
+    min-height:50px
+}
+#captionText{
+    font-size:16px;
+    font-weight:600;
+    color:#374151;
+    transition:opacity 0.3s ease-in-out;   /* smooth fade when changing */
+}
+
+/* ========== DOTS INDICATORS ========== */
+.dots{display:flex; justify-content:center; gap:10px; margin-top:15px}
+
+.dot{width:12px; height:12px; background:#ccc; border-radius:50%; cursor:pointer; transition:background 0.3s, transform 0.3s}
+
+.dot.active{
+    background:#4f46e5;
+    transform:scale(1.2);       /* Makes active dot bigger */
+}
+
+/* ========== RESPONSIVE STYLING ========== */
+/* Tablet */
+@media (max-width: 768px) {
+    .slider-container{padding:15px}
+    .prev, .next{font-size: 20px; padding: 8px 12px}
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .slider-container{padding:10px}
+    .slider-container h1{font-size:20px}
+    .prev, .next{font-size:18px; padding:6px 10px}
+    #captionText{font-size:14px}
+    .dot{width:10px; height:10px}
+}

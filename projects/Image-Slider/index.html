@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="slider-container">
+    <h1>📸 Image Slider</h1>
+
+    <div class="slider">
+      <!-- Images -->
+      <div class="slides">
+        <img src="The Kindom.jpg" alt="The kingdom" data-caption="The Kingdom">
+        <img src="The Devil Wears Prada 2.jpg" alt="The Devil Wears Prada 2" data-caption="The Devil Wears Prada 2">
+        <img src="Death of Robin Hood.jpg" alt="Death of Robin Hood" data-caption="Death of Robin Hood">
+        <img src="The Salvation.jpg" alt="The Salvation" data-caption="The Salvation">
+        <img src="Into The Storm.jpg" alt="Into The Storm" data-caption="Into The Storm">
+      </div>
+
+      <!-- Buttons -->
+      <button class="prev" id="prevBtn">❮</button>
+      <button class="next" id="nextBtn">❯</button>
+    </div>
+
+    <!-- NEW: Caption Box -->
+    <div class="caption-box">
+      <p id="captionText">Serene Mountain Lake at Sunrise</p>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots" id="dotsContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
