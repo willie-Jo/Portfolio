@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Expense Tracker</h1>
+
+        <!-- Project Description -->
+        <div class="description">
+            <p>
+                Track your daily spending and stay on budget.
+                Add expenses with a description, amount, and category.
+                Your data is saved automatically in your browser, so it will still be here when you come back.
+                Use this to monitor where your money goes each month.
+            </p>
+        </div>
+        
+        <!-- Add Expense Form -->
+        <form id="expenseForm">
+            <input type="text" id="descInput" placeholder="Expense description" required>
+            <input type="number" id="amountInput" placeholder="Amount ₦" step="0.01" required>
+            <select id="categoryInput">
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Bills">Bills</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+            </select>
+            <button type="submit">Add Expense</button>
+        </form>
+        
+        <!-- Total -->
+        <div class="total-box">
+            <h2>Total Spent: <span id="totalAmount">₦0.00</span></h2>
+        </div>
+        
+        <!-- Expense List -->
+        <ul id="expenseList"></ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

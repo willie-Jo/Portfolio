@@ -24,7 +24,8 @@ I'm actively learning Bootstrap and just getting started with React.
 | [To-Do List App](./projects/ToDo-List/) | Task manager with CRUD, Local Storage, filters, and Dark/Light Mode | HTML, CSS, JavaScript |
 | [Survey](./projects/Survey-Form/) | Accessible feedback form with validation | HTML, CSS |
 | [Weather App](./projects/Weather-App/index.html) | Real-time weather data using OpenWeather API | HTML, CSS, JavaScript, API |
-| [Image-Slider/ Carousel](./projects/Image-Slider/) | A responsive, auto-playing image slider. | HTML, CSS, JavaScript |
+| [Image-Slider/Carousel](./projects/Image-Slider/) | A responsive, auto-playing image slider/Carousel. | HTML, CSS, JavaScript |
+| [Expense Tracker](./projects/Expense-Tracker/) | A simple personal finance tracker. | HTML, CSS, JavaScript |
 
 ## PHP, MySQL & WordPress
 *Coming soon*
