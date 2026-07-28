@@ -17,21 +17,21 @@
 <body>
     <!-- Page wrapper -->
     <div class="page-wrapper">
-
+        
         <!-- Instructions for the user -->
         <section class="intro">
-            <h1>To-Do List App</h1>
+            <h1>To-Do List App Pro</h1>
             <p class="description">
-                This is a simple task manager that runs entirely in your browser.
-                It helps you keep track of daily tasks and your progress is automatically saved using Local Storage.
+                Manage your tasks like a pro. Add due dates, set priority, search, and edit tasks. All data saves to 
+                your browser automatically.
             </p>
             <h2>How to use</h2>
             <ul>
                 <li>Type a task and press <strong>Enter</strong> or click <strong>Add</strong></li>
                 <li>Click the <strong>Checkbox</strong> to mark a task as complete</li>
-                <li>Click the <strong>trash icon</strong> to delete a task</li>
+                <li>Click the <strong>trash icon 🗑️</strong> to delete a task</li>
                 <li>Use <strong>All / Active / Completed</strong> to filter your tasks</li>
-                <li>Click the<strong>🌙/☀️ icon</strong>to toggle Dark and Light mode</li>
+                <li>Click the<strong>🌙/☀️ icon </strong>to toggle Dark and Light mode</li>
                 <li>Your tasks are <strong>automatically saved</strong> in your browser</li>
             </ul>
         </section>
@@ -46,20 +46,32 @@
             
             
             <!-- Form to add new tasks -->
-            <form id="task-form">
-                <input type="text" id="task-input" placeholder="Add a new task..." required>
-                <button type="submit">Add</button>
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="What needs to be done?" required>
+                <input type="date" id="dateInput">
+                <select id="priorityInput">
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <button type="submit">Add Task</button>
             </form>
             
-            <!-- Filter buttons to show All, Active, or Completed tasks -->
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="active">Active</button>
-                <button class="filter-btn" data-filter="completed">Completed</button>
+            <!-- Search + Filter buttons to show All, Active, or Completed tasks -->
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Search tasks...">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
             </div>
             
+            <!-- Stats bar -->
+            <div class="stats" id="stats">0 tasks</div>
+            
             <!-- Task list will be injected here by JavaScript -->
-            <ul id="task-list"></ul>
+            <ul id="taskList"></ul>
         </div>
     </div>
     

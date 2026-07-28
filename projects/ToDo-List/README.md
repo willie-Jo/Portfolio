@@ -1,23 +1,38 @@
 # To-Do List App
 
-A responsive task manager that saves your tasks in the browser using local Storage. No backend needed.
+A responsive task manager that saves your tasks in the browser using local Storage. No backend needed. Built with Vanilla JavaScript. This is an upgraded version of a basic To-Do app with real-world features.
 
 ## Features
- - Add, Edit, and Delete tasks
- - Mark tasks as Complete / Incomplete
- - Data persists with browser Local Storage
- - Filter tasks: ALL, Active, Completed
- - Dark / Light mode toggle
+ - CRUD: Add, Edit, Toggle, and Delete tasks
+ - Stats Bar: See total, completed, and remaining tasks
+ - Search: Find tasks by keyword instantly
+ - Priority Levels: High, Medium, Low with color coding
+ - Due Dates: Set dates and get "overdue" warnings
+ - Persistence: All tasks save automatically to browser Local Storage
+ - Filter tasks: View All, Active, or Completed tasks
+ - Dark/Light mode: Theme preference saved to localStorage
  - Responsive design for mobile and desktop
 
  ## Tech Stack
  HTML, CSS3, JavaScript
 
- ## How to Use
- 1. Type a task and press `Enter` or click Add
- 2. Click the checkbox to mark complete
- 3. Click the edit/delete icons to manage tasks
- 4. Data is automatically saved in your browser
+ ## Concepts Practiced
+ - 'Array.filter()' and 'Array.map()' for state updates
+ - 'Array.find()' for editing tasks
+ - 'Date' object for due date comparison
+ - Event Delegation for dynamic list items
+ - 'localStorage' for data persistence
+ - 'Responsive Grid and Flexbox
+
+ ## How to Run
+ 1. Clone the repo
+ 2. Open `index.html` in your browser
+ 3. or view it live: [Link to GitHub page when deployed]
 
  ## Screenshot
- ![Screenshot](screenshot-ToDo.png)
+ ![To-Do Pro Screenshot](screenshot-ToDo-List-pro.png)
+
+ ## Future Improvements
+ - Drag and drop to reorder tasks
+ - Categories/Tags
+ - Export tasks to JSON

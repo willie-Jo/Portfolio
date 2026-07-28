@@ -7,9 +7,9 @@ I'm currently focused on core web development: HTML, CSS, JavaScript, PHP, MySQL
 I'm actively learning Bootstrap and just getting started with React.
 
 ## Tech Stack
-- Core Skills: HTML5, CCS3, JavaScript, PHP, MySQL, WordPress.
+- Core Skills: HTML5, CSS3, JavaScript ES6, PHP, MySQL, WordPress.
 - Learning: Bootstrap, React
-- Tools: Git, Github, VS Code, Sublime Text.
+- Tools: Git, GitHub, VS Code, Sublime Text.
 
 ## Projects
 
@@ -36,4 +36,4 @@ I'm actively learning Bootstrap and just getting started with React.
 3. For PHP/MySQL: Use XAMPP/Laragon and import .sql file
 
 ---
-Built with &hearts; by William Adejoh
+Built with &hearts; by William Adejoh | Abuja, Nigeria.
