@@ -38,7 +38,7 @@
 			<div class="hero-cover"></div>
 			<div class="hero-profile-content">
 				<div class="avatar-wrap">
-					<a href="profile-large.jpg" target="_blank" aria-label="View full profile picture">
+					<a href="profile-large.jpg" class="avatar-link" target="_blank" aria-label="View full profile picture">
 						<img class="profile-image" src="file_000000004c9071f587c73650ccdf693e.jpg" alt="Adejoh" loading="lazy"/>
 					</a>
 				</div>
@@ -123,17 +123,19 @@
 				<!-- Filter Buttons -->
 				<div class="filter-buttons">
 					<button class="filter-btn active" data-filter="all">All</button>
-					<button class="filter-btn" data-filter="vanilla">HTML/CSS/JS</button>
-					<button class="filter-btn" data-filter="frontend">Frontend</button>
-					<button class="filter-btn" data-filter="backend">PHP/MySQL</button>
-					<button class="filter-btn" data-filter="wordpress">WordPress</button>
-					<button class="filter-btn" data-filter="react">React/Bootstrap</button>
+					<button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+					<button class="filter-btn" data-filter="vanilla">Vanilla JS</button>
+					<button class="filter-btn" data-filter="api">API</button>
+					<button class="filter-btn" data-filter="bootstrap" disabled>Bootstrap</button>
+					<button class="filter-btn" data-filter="react" disabled>React</button>
+					<button class="filter-btn" data-filter="php" disabled>PHP/MySQL</button>
+					<button class="filter-btn" data-filter="wordpress" disabled>WordPress</button>
 				</div>
 				
 				<!-- Project Grid -->
 				<div class="projects-grid">
-
-					<div class="project-card" data-category="vanilla">
+					<!-- 1. HTML/CSS ONLY -->
+					<div class="project-card" data-category="html-css">
 						<img src="projects/FacebookClone/screenshot-mobile.png" alt="facebook Login Clone Preview">
 						<div class="project-info">
 							<h3>Facebook Login Clone</h3>
@@ -146,8 +148,8 @@
 						</div>
 					</div>
 
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/SaaS-Product-Landing-Page/screenshot-desktop.png" alt="">
+					<div class="project-card" data-category="html-css">
+						<img src="projects/SaaS-Product-Landing-Page/screenshot-desktop.png" alt="SaaS Product Landing Page">
 						<div class="project-info">
 							<h3>SaaS Product landing page</h3>
 							<p>1-screen modern Saas/Product landing page. Glassy, clean, mobile-first.</p>
@@ -159,7 +161,7 @@
 						</div>
 					</div>
 
-					<div class="project-card" data-category="vanilla">
+					<div class="project-card" data-category="html-css">
 						<img src="projects/Ink-Landing-Page/screenshot-desktop.png" alt="Ink Landing Page">
 						<div class="project-info">
 							<h3>Ink Landing Page</h3>
@@ -172,8 +174,9 @@
 						</div>
 					</div>
 
+					<!-- 2. VANILLA JS -->
 					<div class="project-card" data-category="vanilla">
-						<img src="projects/calculator-project/calculator-preview.png" alt="Calculator">
+						<img src="projects/calculator-project/calculator-preview.png" alt="Glassmorphism Calculator">
 						<div class="project-info">
 							<h3>Glassmorphism Calculator</h3>
 							<p>A responsive calculator with dark/light mode, keyboard support, and calculation history. Built with Vanilla JS.</p>
@@ -186,7 +189,7 @@
 					</div>
 
 					<div class="project-card" data-category="vanilla">
-						<img src="projects/Survey-Form/screenshot-surveyForm.png" alt="survey-form">
+						<img src="projects/Survey-Form/screenshot-surveyForm.png" alt="survey form">
 						<div class="project-info">
 							<h3>Survey Form</h3>
 							<p>Accessible feedback form with validation</p>
@@ -206,19 +209,6 @@
 							<span class="tech">HTML, CSS, JavaScript</span>
 							<div class="project-links">
 								<a href="projects/ToDo-List/index.html" class="project-btn btn btn-primary" target="_blank">View Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/my-profile-page" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/Weather-App/Screenshot-weatherApp.png" alt="Weather App">
-						<div class="project-info">
-							<h3>Weather App</h3>
-							<p>A responsive weather application that fetches real-time data from OpenWeather API.</p>
-							<span class="tech">HTML, CSS, JavaScript</span>
-							<div class="project-links">
-								<a href="projects/Weather-App/index.html" class="project-btn btn btn-primary" target="_blank">View Demo &rarr;</a>
 								<a href="https://github.com/willie-Jo/my-profile-page" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
 							</div>
 						</div>
@@ -250,9 +240,20 @@
 						</div>
 					</div>
 					
-					<div class="project-card">
-						<h3>Frontend Project Coming Soon</h3>
+					<!-- 3. VANILLA + API -->
+					<div class="project-card" data-category="vanilla api">
+						<img src="projects/Weather-App/Screenshot-weatherApp.png" alt="Weather App">
+						<div class="project-info">
+							<h3>Weather App</h3>
+							<p>A responsive weather application that fetches real-time data from OpenWeather API.</p>
+							<span class="tech">HTML, CSS, JavaScript</span>
+							<div class="project-links">
+								<a href="projects/Weather-App/index.html" class="project-btn btn btn-primary" target="_blank">View Demo &rarr;</a>
+								<a href="https://github.com/willie-Jo/my-profile-page" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
+							</div>
+						</div>
 					</div>
+
 				</div>
 			</div>
 		</section>

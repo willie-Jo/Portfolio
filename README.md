@@ -35,5 +35,8 @@ I'm actively learning Bootstrap and just getting started with React.
 2. For HTML/CSS/JS: Open 'index.html' in browser
 3. For PHP/MySQL: Use XAMPP/Laragon and import .sql file
 
+## Author
+**William Adejoh**
+Frontend Developer
 ---
-Built with &hearts; by William Adejoh | Abuja, Nigeria.
+&copy; 2026 Portfolio. All rights reserved.

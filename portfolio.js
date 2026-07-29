@@ -33,7 +33,7 @@ window.addEventListener('scroll', () => {
             current = section.getAttribute('id');
         }
     });
-
+    
     document.querySelectorAll('.main-nav a').forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').substring(1) === current) {
@@ -66,26 +66,36 @@ document.querySelector(".close").onclick = () => modal.style.display = "none";
 modal.onclick =  (e) => { if(e.target == modal) modal.style.display = "none";}
 
 // Poject Filters 
+document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // 1. Don't do anything if button is disabled
+            if (btn.disabled) return;
 
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
+            // 2. Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
 
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // 1. Remove active class from all buttons
-        filterBtns.forEach(b => b.classList.remove('active'));
-        // 2. Add active to clicked button
-        btn.classList.add('active');
+            // 3. Add active to clicked button
+            btn.classList.add('active');
+            
+            const filter = btn.dataset.filter;
+            /*const filter = btn.getAttribute('data-filter');*/
+            
+            // 3. Show/hide projects
+            projectCards.forEach(card => {
+                const categories = card.dataset.category;  
 
-        const filter = btn.getAttribute('data-filter');
-
-        // 3. Show/hide projects
-        projectCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+                if (filter === 'all') {
+                    card.style.display = 'block';
+                } else if (categories && categories.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         });
     });
-});
+})
