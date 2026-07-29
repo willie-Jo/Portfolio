@@ -1,10 +1,8 @@
 # Ink - Team Collaboration Landing Page
-
 A clean, responsive, single-page landing template for team collaboration tools.
 Built with pure HTML5 and CSS3. No frameworks, No JS.
 
 ## Features
-
 - Fully Responsive: Mobile-first design. Works on mobile, tablet, and desktop.
 - CSS-Only Auto Carousel: Smooth 3-slide auto animation. No JavaScript needed.
 - Sticky Header: With dropdown navigation menu.
@@ -20,13 +18,11 @@ Built with pure HTML5 and CSS3. No frameworks, No JS.
 *Mobile View*
 
 ## Tech Stack 
-
 - HTML5 - Semantic structure
 - CSS3 - Variables, Flex, Grid, Animation, Media Queries
 - Google Fonts - Playfair Display
 
 ## How to Run 
-
 Just open 'index.html' in your browser. No install needed.
 
 ## Author

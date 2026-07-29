@@ -1,10 +1,10 @@
 # Weather App
 
-A responsive weather application that fetches real-time data from OpenWeather API.
+A responsive weather application that fetches real-time data from OpenWeather API for Any city.
 
 ## Features
 - Search by City: Enter any city name to get current weather
-- Live Data: Temperature, humidity, wind speed, and weather icon
+- Live Data: Temperature, humidity, wind speed, and weather condition
 - Error Handling: Shows message if city is not found
 - Responsive: Works on mobile and desktop
 
@@ -14,7 +14,31 @@ A responsive weather application that fetches real-time data from OpenWeather AP
 - Vanilla JavaScript
 - OpenWeather API
 
-## Setup
-1. Get a free API key from openweathermap.org
-2. Paste it into script.js
-3. Open index.html in browser
+
+## How to Run
+1. Clone the repo
+2. Get a free API key from openweathermap.ors
+3. Paste it into `script.js` <!-- first line of code (const API_KEY = "YOUR_API_KEY_HERE") -->
+4. Open `index.html`in browser
+
+## Concepts Practiced(learned)
+- `fetch()` API for HTTP request
+- `async/await` for handling asynchronous data
+- JSON data parsing and DOM manipulation
+- API keys and error handling
+- Responsive UI with CSS Flexbox
+
+ ## Screenshot
+ ![Weather-App Screenshot](screenshot-weatherApp.png)
+
+## Future Improvements
+- 5-Day forecast
+- Geolocation to auto-detect user location
+- Toggle between Celsius and Fahrenheit
+
+## Author
+
+**William Adejoh**
+Frontend Developer
+---
+&copy; 2026 Weather App. All rights reserved.

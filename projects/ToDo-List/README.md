@@ -16,6 +16,12 @@ A responsive task manager that saves your tasks in the browser using local Stora
  ## Tech Stack
  HTML, CSS3, JavaScript
 
+ ## How to Run
+ 1. Clone the repo
+ 2. Open `index.html` in your browser
+ 3. or view it live: [Link to GitHub page when deployed]
+
+ 
  ## Concepts Practiced
  - 'Array.filter()' and 'Array.map()' for state updates
  - 'Array.find()' for editing tasks
@@ -24,11 +30,6 @@ A responsive task manager that saves your tasks in the browser using local Stora
  - 'localStorage' for data persistence
  - 'Responsive Grid and Flexbox
 
- ## How to Run
- 1. Clone the repo
- 2. Open `index.html` in your browser
- 3. or view it live: [Link to GitHub page when deployed]
-
  ## Screenshot
  ![To-Do Pro Screenshot](screenshot-ToDo-List-pro.png)
 
@@ -36,3 +37,9 @@ A responsive task manager that saves your tasks in the browser using local Stora
  - Drag and drop to reorder tasks
  - Categories/Tags
  - Export tasks to JSON
+
+ ## Author
+**William Adejoh**
+Frontend Developer
+---
+&copy; 2026 ToDo-List Pro. All rights reserved.

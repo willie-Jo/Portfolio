@@ -16,11 +16,24 @@ A responsive, auto-playing image slider built with Vanilla HTML, CSS, and JavaSc
 - CSS3 - Flexbox, Responsive Design, Transitions
 - Vanilla JavaScript - DOM Manipulation, Event Listeners, setInterval
 
-### How to Use
+### How to Run
 1. Clone the repo
-2. Open `index.html` in your browser
-3. To add your own images: Replace the `src` in the `<img>` tags
-4. To add your own captions: Change the `data-caption` attribute
+2. To add your own images: Replace the `src` in the `<img>` tags
+3. To add your own captions: Change the `data-caption` attribute
+4. Open `index.html` in your browser
 
-### What I Learned
-Building state management with 'currentIndex', creating elements dynamically with JS, and handling user interactions like hover and clicks.
+### Concept Practiced(learned)
+- DOM manipulation to change  `transform: translateX()`
+- `setInterval` fro autoplay functionality
+- Event listeners for button clicks
+- Managing state with a `currentSlide` variable
+- CSS transitions for animation
+
+## Screenshot
+![Image-Slider/Carousel](screenshot-image-slider.png)
+
+## Author
+**William Adejoh**
+Frontend Developer
+---
+&copy; 2026 Image-Slider. All rights reserved.

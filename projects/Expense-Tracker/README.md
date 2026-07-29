@@ -17,7 +17,7 @@ All data is saved in your browser using `localStorage`.
 - CSS3 - Flexbox, Responsive Design, Mobile-first
 - Vanilla JavaScript - DOM Manipulation, Array Methods, localStorage CRUD
 
-### How to Use
+### How to Run
 1. Clone the repo
 2. Open `index.html` in your browser
 3. Fill the form and click "Add Expense"
@@ -30,6 +30,9 @@ All data is saved in your browser using `localStorage`.
 - `Array.filter()` for deleting items
 - Event delegation and form handling
 - Dynamic DOM rendering
+
+## Screenshot
+![Expense-Tracker](screenshot-expense-tracker.png)
 
 ### Future Upgrade
 This can be connected to an E-commerce Product UI. Instead of manual input, 
