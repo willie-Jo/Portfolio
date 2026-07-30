@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="William Adejoh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main chat container -->
+    <div class="chat-container">
+        
+        <!-- Header with contact info -->
+        <header class="chat-header">
+            <div class="avatar"></div>
+            <div>
+                <h2>Sarah Johnson</h2>
+                <p class="status">Online</p>
+            </div>
+        </header>
+
+        <!-- Chat messages area. Messages injected by JS -->
+        <main class="chat-messages" id="chatMessages">
+            <!-- Messages will be rendered here -->
+        </main>
+
+        <!-- Typing indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <span></span><span></span><span></span> Sarah is typing...
+        </div>
+
+        <!-- Input area -->
+        <footer class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type a message..." />
+            <button id="sendBtn">Send</button>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

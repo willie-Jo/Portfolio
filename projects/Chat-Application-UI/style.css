@@ -1,0 +1,120 @@
+/*******************************************************
+ * Chat Application UI
+ * Author: William Adejoh
+ * Description:
+ *   WhatsApp-style chat interface with message bubbles,
+ *   typing indicator, and responsive layout.
+ *******************************************************/
+
+ :root{
+    --bg:#0b141a; 
+    --chat-bg:#111b21; 
+    --header:#202c33; 
+    --input:#2a3942;
+    --my-msg:#005c4b; 
+    --their-msg:#202c33; 
+    --text:#e9edef; 
+    --muted:#aebac1;
+    --accent:#00a884;
+}
+
+*{box-sizing:border-box; margin:0; padding:0}
+
+body{
+    font-family: system-ui, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    padding:10px;
+}
+
+/* Main chat container */
+.chat-container{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    max-width:500px;
+    height:90vh;
+    background:var(--chat-bg);
+    border-radius:12px;
+    overflow:hidden;
+}
+
+/* Header */
+.chat-header{display:flex; align-items:center; gap:12px; padding:16px; background:var(--header)}
+.avatar{width:40px; height:40px; border-radius:50%; background:var(--accent)}
+.chat-header h2{font-size:16px}
+.status{font-size:12px; color:var(--muted)}
+
+/* Messages area */
+.chat-messages{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    padding:20px;
+    overflow-y:auto;
+    gap:10px;
+}
+
+/* Message bubbles */
+.message{
+    max-width:70%;
+    padding:10px 14px;
+    border-radius:8px;
+    line-height:1.4;
+    font-size:15px;
+    position:relative;
+}
+
+.message.sent{background:var(--my-msg); align-self:flex-end; border-bottom-right-radius:2px}
+.message.received{background:var(--their-msg); align-self:flex-start; border-bottom-left-radius:2px}
+
+/* Typing indicator */
+.typing-indicator{
+    display:none; /* Hidden by default */
+    padding:0 20px 10px;
+    font-size:13px;
+    color:var(--muted);
+    align-items:center;
+    gap:4px;
+}
+
+.typing-indicator span{width:6px; height:6px; background:var(--muted); border-radius:50%; animation: bounce 1.4s infinite}
+.typing-indicator span:nth-child(2){animation-delay:0.2s}
+.typing-indicator span:nth-child(3){animation-delay:0.4s}
+
+@keyframes bounce{
+    0%, 60%, 100%{transform:translateY(0)}
+    30%{transform:translateY(-5px)}
+}
+
+/* Input area */
+.chat-input{display:flex; gap:10px; padding:12px; background:var(--header)}
+.chat-input input{
+    flex:1;
+    padding:12px 16px;
+    border:none;
+    /*border-radius:8px;*/
+    background:var(--input);
+    color:var(--text);
+    font-size:15px;
+    outline:none;
+}
+.chat-input button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+}
+.chat-input button:hover{opacity:0.9}
+
+/* Mobile */
+@media(max-width:600px){
+    .chat-container{height:100vh; /*border-radius:8px;*/ padding:8px 0}
+}    
