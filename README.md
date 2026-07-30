@@ -26,6 +26,8 @@ I'm actively learning Bootstrap and just getting started with React.
 | [Weather App](./projects/Weather-App/index.html) | Real-time weather data using OpenWeather API | HTML, CSS, JavaScript, API |
 | [Image-Slider/Carousel](./projects/Image-Slider/) | A responsive, auto-playing image slider/Carousel. | HTML, CSS, JavaScript |
 | [Expense Tracker](./projects/Expense-Tracker/) | A simple personal finance tracker. | HTML, CSS, JavaScript |
+| [Compound Interest Calculator](./projects/Compound-Interest-Calculator/) | A Responsive web app that calculates compound interest growth year-by-year using a "for loop". | HTML, CSS, JavaScript, Chart.js |
+| [E-commerce Product UI](./projects/E-Commerce-UI/) | A responsive e-commerce product grid. | HTML, CSS, JavaScript |
 
 ## PHP, MySQL & WordPress
 *Coming soon*

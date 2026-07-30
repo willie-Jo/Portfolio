@@ -5,7 +5,8 @@
  *   Validates with alert(), calculates compound 
  *   interest year by year and 
  *   renders the result into an HTML table.
- *   Uses DOM manipulation and modern JS methods.
+ *   Uses DOM manipulation and modern JS methods with 
+ *   Chart.js line graph.
  *******************************************************/
 
 // Grab DOM elements

@@ -24,7 +24,7 @@ All data is saved in your browser using `localStorage`.
 4. Your expenses are automatically saved to the browser
 
 
-### Key Concepts Learned
+### Concepts Practiced(learned)
 - `localStorage.setItem()` and `JSON.parse()` for data persistence
 - `Array.reduce()` to calculate totals
 - `Array.filter()` for deleting items
@@ -37,3 +37,10 @@ All data is saved in your browser using `localStorage`.
 ### Future Upgrade
 This can be connected to an E-commerce Product UI. Instead of manual input, 
 "Add to Cart" can push directly to this tracker as the "Cart Summary".
+
+## Author
+
+**William Adejoh**
+Frontend Developer
+---
+&copy; 2026 Expense Tracker. All rights reserved.

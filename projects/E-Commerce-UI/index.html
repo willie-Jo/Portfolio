@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="William Adejoh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>ShopGrid</h1>
+        <div class="cart">Cart <span id="cartCount">0</span></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Tech Essentials for 2026</h2>
+        <p>Curated gadgets to upgrade your workspace. Clean design, fast shipping.</p>
+    </section>
+
+    <!-- Sidebar + Products-->
+    <div class="container">
+        <!-- Sidebar for categories -->
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <button data-category="all" onclick="filterProducts('all')">All</button>
+            <button data-category="audio" onclick="filterProducts('audio')">Audio</button>
+            <button data-category="computer" onclick="filterProducts('computer')">Computer</button>
+        </aside>
+
+        <main class="product-grid" id="productGrid"><!-- Products will be injected by JS --></main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
