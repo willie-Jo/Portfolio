@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="William Adejoh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main class="calculator-wrap">
+        <h1>Compound Interest Calculator</h1>
+        <p class="subtitle">See how your money grows over time</p>
+        
+        <form class="calculator-form" id="interestForm" novalidate>
+            <div class="form-group">
+                <label for="deposit">Initial deposit:</label>
+                <input type="number" id="deposit" min="1" max="999" step="1" placeholder="&dollar;1,000" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="rate">Annual Interest Rate:</label>
+                <div class="input-with-icon">
+                    <input type="number" id="rate" min="0.1" max="100" step="0.1" placeholder="5.5" required> 
+                    <span>&nbsp;%</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="years">Years To Grow:</label>
+                <input type="number" id="years" min="1" max="50" step="1" placeholder="10" required>
+            </div>
+
+            <button type="submit" class="btn-calculate">Generate Table</button>
+        </form>
+
+        <div id="result-container" class="hidden">
+            <h2>Growth Breakdown</h2>
+            <div class="table-wrap">
+                <table id="result">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Starting Value</th>
+                            <th>Interest Earned</th>
+                            <th>Ending Value</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="chart-wrap">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+            <button type="button" id="resetBtn" class="btn-reset">Calculate Again</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
