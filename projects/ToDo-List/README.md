@@ -42,4 +42,4 @@ A responsive task manager that saves your tasks in the browser using local Stora
 **William Adejoh**
 Frontend Developer
 ---
-&copy; 2026 ToDo-List Pro. All rights reserved.
+&copy; 2026 ToDo-List Pro. Part of web development portfolio.

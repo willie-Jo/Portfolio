@@ -44,4 +44,4 @@ This is a UI clone for learning purposes only. No backend functionality.
 **William Adejoh**
 Frontend Developer
 ---
-&copy; 2026 FacebookClone(login & sign-up page). All rights reserved.
+&copy; 2026 FacebookClone(login & sign-up page). Part of web development portfolio.

@@ -41,4 +41,4 @@ Includes basic JavaScript validation for required fields and email format.
 **William Adejoh**
 Frontend Developer
 ---
-&copy; 2026 Survey Form. All rights reserved.
+&copy; 2026 Survey Form. Part of web development portfolio.

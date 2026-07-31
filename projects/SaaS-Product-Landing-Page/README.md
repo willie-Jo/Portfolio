@@ -29,4 +29,4 @@ HTML5, CSS3
 **William Adejoh**
 Frontend Developer
 ---
-&copy; 2026 Product Landing Page. All rights reserved.
+&copy; 2026 Product Landing Page. Part of web development portfolio.

@@ -39,4 +39,4 @@ HTML5, CSS3, JavaScript
 **William Adejoh**
 Frontend Developer
 ---
-&copy; 2026 Calculator. All rights reserved.
+&copy; 2026 Calculator. Part of web development portfolio.

@@ -23,7 +23,7 @@ Built with pure HTML5 and CSS3. No frameworks, No JS.
 - Google Fonts - Playfair Display
 
 ## How to Run 
-Just open 'index.html' in your browser. No install needed.
+Just open `index.html` in your browser. No install needed.
 
 ## Author
 
@@ -31,4 +31,4 @@ Just open 'index.html' in your browser. No install needed.
 Frontend Developer
 
 ---
-&copy; 2026 Ink. All rights reserved.
+&copy; 2026 Ink. Part of web development portfolio.

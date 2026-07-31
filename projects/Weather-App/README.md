@@ -41,4 +41,4 @@ A responsive weather application that fetches real-time data from OpenWeather AP
 **William Adejoh**
 Frontend Developer
 ---
-&copy; 2026 Weather App. All rights reserved.
+&copy; 2026 Weather App. Part of web development portfolio.

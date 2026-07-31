@@ -36,4 +36,4 @@ A responsive, auto-playing image slider built with Vanilla HTML, CSS, and JavaSc
 **William Adejoh**
 Frontend Developer
 ---
-&copy; 2026 Image-Slider. All rights reserved.
+&copy; 2026 Image-Slider. Part of web development portfolio.

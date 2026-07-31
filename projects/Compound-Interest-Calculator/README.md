@@ -45,4 +45,4 @@ Built as part of my Front-End Developer portfolio to demonstrate DOM manipulatio
 **William Adejoh**
 Frontend Developer
 ---
-&copy; 2026 Compound Interest Calculator. All rights reserved.
+&copy; 2026 Compound Interest Calculator. Part of web development portfolio.

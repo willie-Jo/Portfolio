@@ -1,5 +1,5 @@
 /*******************************************************
- * Chat Application UI
+ * Chat Application UI - Fancy v2
  * Author: William Adejoh
  * Description:
  *   WhatsApp-style chat interface with message bubbles,
@@ -8,7 +8,7 @@
 
  :root{
     --bg:#0b141a; 
-    --chat-bg:#111b21; 
+    --chat-bg:linear-gradient(180deg,#111b21 0%,#0e161b 100%); 
     --header:#202c33; 
     --input:#2a3942;
     --my-msg:#005c4b; 
@@ -16,13 +16,14 @@
     --text:#e9edef; 
     --muted:#aebac1;
     --accent:#00a884;
+    --shadow:0 10px 30px rgba(0,0,0,0.35);
 }
 
 *{box-sizing:border-box; margin:0; padding:0}
 
 body{
-    font-family: system-ui, sans-serif;
-    background:var(--bg);
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background:radial-gradient(1200px 600px at 50% -10%,#1a2a33 0%,var(--bg) 60%);
     color:var(--text);
     display:flex;
     justify-content:center;
@@ -36,17 +37,32 @@ body{
     display:flex;
     flex-direction:column;
     width:100%;
-    max-width:500px;
+    max-width:520px;
     height:90vh;
     background:var(--chat-bg);
-    border-radius:12px;
+    border-radius:20px;
     overflow:hidden;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(255, 255, 255, 0.04)
 }
 
 /* Header */
-.chat-header{display:flex; align-items:center; gap:12px; padding:16px; background:var(--header)}
-.avatar{width:40px; height:40px; border-radius:50%; background:var(--accent)}
-.chat-header h2{font-size:16px}
+.chat-header{
+    display:flex; 
+    align-items:center; 
+    gap:12px; padding:16px; 
+    background:rgba(32,44,51,0.85);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.avatar{
+    width:42px; 
+    height:42px; 
+    border-radius:50%; 
+    background:linear-gradient(135deg,var(--accent),#128c7e);
+    box-shadow:0 0 0 2px rgba(0,168,132,0.25);
+}
+.chat-header h2{font-size:16px; font-weight:600}
 .status{font-size:12px; color:var(--muted)}
 
 /* Messages area */
@@ -56,33 +72,37 @@ body{
     flex:1;
     padding:20px;
     overflow-y:auto;
-    gap:10px;
+    gap:12px;
+    background-image:radial-gradient(rgba(255,255,255,0.03) 1px,transparent 1px);
+    background-size:20px 20px;
 }
 
 /* Message bubbles */
 .message{
     max-width:70%;
     padding:10px 14px;
-    border-radius:8px;
-    line-height:1.4;
+    border-radius:14px;
+    line-height:1.45;
     font-size:15px;
     position:relative;
+    animation:fadeIn .2s ease;
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
 }
 
-.message.sent{background:var(--my-msg); align-self:flex-end; border-bottom-right-radius:2px}
-.message.received{background:var(--their-msg); align-self:flex-start; border-bottom-left-radius:2px}
+.message.sent{background:var(--my-msg); align-self:flex-end; border-bottom-right-radius:4px}
+.message.received{background:var(--their-msg); align-self:flex-start; border-bottom-left-radius:4px}
 
 /* Typing indicator */
 .typing-indicator{
     display:none; /* Hidden by default */
-    padding:0 20px 10px;
+    padding:0 20px 14px;
     font-size:13px;
     color:var(--muted);
     align-items:center;
-    gap:4px;
+    gap:6px;
 }
 
-.typing-indicator span{width:6px; height:6px; background:var(--muted); border-radius:50%; animation: bounce 1.4s infinite}
+.typing-indicator span{width:7px; height:7px; background:var(--muted); border-radius:50%; animation: bounce 1.4s infinite}
 .typing-indicator span:nth-child(2){animation-delay:0.2s}
 .typing-indicator span:nth-child(3){animation-delay:0.4s}
 
@@ -90,31 +110,47 @@ body{
     0%, 60%, 100%{transform:translateY(0)}
     30%{transform:translateY(-5px)}
 }
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(4px)}
+    to{opacity:1; transform:translateY(0);}
+}
 
 /* Input area */
-.chat-input{display:flex; gap:10px; padding:12px; background:var(--header)}
+.chat-input{
+    display:flex; 
+    gap:10px; 
+    padding:12px; 
+    background:rgba(32,44,51,0.85); 
+    backdrop-filter:blur(8px);
+    border-top:1px solid rgba(255,255,255,0.05);
+}
 .chat-input input{
     flex:1;
     padding:12px 16px;
     border:none;
-    /*border-radius:8px;*/
+    border-radius:12px;
     background:var(--input);
     color:var(--text);
     font-size:15px;
     outline:none;
+    transition:background .2s;
 }
+.chat-input input:focus{background:#33444c}
 .chat-input button{
     padding:12px 20px;
     border:none;
-    border-radius:8px;
-    background:var(--accent);
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--accent),#128c7e);
     color:#fff;
     font-weight:700;
     cursor:pointer;
+    transition:transform .1s, opacity .2s;
 }
-.chat-input button:hover{opacity:0.9}
+.chat-input button:hover{opacity:0.95; transform:translateY(-1px)}
+.chat-input button:active{transform:translateY(0)}
 
 /* Mobile */
 @media(max-width:600px){
-    .chat-container{height:100vh; /*border-radius:8px;*/ padding:8px 0}
+    body{padding:0}
+    .chat-container{height:100vh; border-radius:18px; margin:10px; max-width:100%}
 }    

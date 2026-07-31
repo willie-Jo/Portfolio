@@ -43,4 +43,4 @@ This can be connected to an E-commerce Product UI. Instead of manual input,
 **William Adejoh**
 Frontend Developer
 ---
-&copy; 2026 Expense Tracker. All rights reserved.
+&copy; 2026 Expense Tracker. Part of web development portfolio.
