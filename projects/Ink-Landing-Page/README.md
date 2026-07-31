@@ -25,10 +25,5 @@ Built with pure HTML5 and CSS3. No frameworks, No JS.
 ## How to Run 
 Just open `index.html` in your browser. No install needed.
 
-## Author
-
-**William Adejoh**
-Frontend Developer
-
 ---
-&copy; 2026 Ink. Part of web development portfolio.
+Built by **William Adejoh** as part of my web development portfolio.

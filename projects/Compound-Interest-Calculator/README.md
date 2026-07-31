@@ -40,9 +40,5 @@ Built as part of my Front-End Developer portfolio to demonstrate DOM manipulatio
 - Export table to CSV
 - Add currency selsctor
 
-## Author
-
-**William Adejoh**
-Frontend Developer
 ---
-&copy; 2026 Compound Interest Calculator. Part of web development portfolio.
+Built by **William Adejoh** as part of my web development portfolio.

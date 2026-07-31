@@ -25,8 +25,5 @@ HTML5, CSS3
 
 ![Screenshot](screenshot-desktop.png)
 
-## Author
-**William Adejoh**
-Frontend Developer
 ---
-&copy; 2026 Product Landing Page. Part of web development portfolio.
+Built by **William Adejoh** as part of my web development portfolio.

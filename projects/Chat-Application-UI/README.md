@@ -34,7 +34,5 @@ A responsive, WhatsApp-style chat interface built with Vanilla JavaScript, HTML5
 
 ## Author
 
-**William Adejoh**
-Frontend Developer
 ---
-&copy; 2026 Chat App UI. Part of web development portfolio.
+Built by **William Adejoh** as part of my web development portfolio.

@@ -36,9 +36,4 @@ Includes basic JavaScript validation for required fields and email format.
 - Multi-step form version
 
 
-## Author
-
-**William Adejoh**
-Frontend Developer
----
-&copy; 2026 Survey Form. Part of web development portfolio.
+Built by **William Adejoh** as part of my web development portfolio.

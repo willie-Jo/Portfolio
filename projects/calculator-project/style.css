@@ -29,7 +29,7 @@
   
   /* Calculator Container */
   .calculator{
-    width:90%; max-width:350px; padding:25px;
+    width:90%; max-width:350px; margin:26px 2px; padding:12px 8px;
     background:var(--glass); backdrop-filter:blur(15px);
     border-radius:20px; border:1px solid rgba(255,255,255,0.2);
     box-shadow:0 8px 32px rgba(0,0,0,0.3)
@@ -45,9 +45,9 @@
   #result {width:100%; background:none; border:none; color:var(--text); font-size:32px; text-align:right; outline:none}
   
   /* Calculator's Buttons */
-  .buttons{display:grid; grid-template-columns:repeat(4, 1fr); gap:12px}
+  .buttons{display:grid; grid-template-columns:repeat(4, 1fr); gap:8px}
   .btn{
-    padding:20px; font-size:18px; border:none; border-radius:12px;
+    padding:14px; font-size:14px; border:none; border-radius:12px;
     background:var(--btn); color:var(--text); cursor:pointer;
     transition:all 0.15s ease; backdrop-filter:blur(5px)
   }

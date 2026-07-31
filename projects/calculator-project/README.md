@@ -34,9 +34,5 @@ HTML5, CSS3, JavaScript
 - Add calculation history
 - Add theme switcher
 
-## Author
-
-**William Adejoh**
-Frontend Developer
 ---
-&copy; 2026 Calculator. Part of web development portfolio.
+Built by **William Adejoh** as part of my web development portfolio.

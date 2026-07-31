@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="William Adejoh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lms-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <h1 class="logo">LearnHub</h1>
+                <div class="profile">
+                    <div class="avatar-placeholder">WA</div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">My Courses</a>
+                <a href="#">Assignments</a>
+                <a href="#">Certificates</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <h2>Welcome back William!</h2>
+            </header>
+            
+            <!-- Stats -->
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>4</h3>
+                    <p>Courses Enrolled</p>
+                </div>
+                <div class="stat-card">
+                    <h3>68%</h3>
+                    <p>Overall Progress</p>
+                </div>
+                <div class="stat-card">
+                    <h3>2</h3>
+                    <p>Pending Assignments</p>
+                </div>
+            </section>
+            
+            <!-- Course Grid -->
+            <section class="courses">
+                <h3>Continue Learning</h3>
+                <div class="course-grid" id="courseGrid">
+                    <!-- Cards injected by JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

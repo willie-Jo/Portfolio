@@ -36,9 +36,4 @@ A responsive weather application that fetches real-time data from OpenWeather AP
 - Geolocation to auto-detect user location
 - Toggle between Celsius and Fahrenheit
 
-## Author
-
-**William Adejoh**
-Frontend Developer
----
-&copy; 2026 Weather App. Part of web development portfolio.
+Built by **William Adejoh** as part of my web development portfolio.

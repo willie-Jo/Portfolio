@@ -38,8 +38,4 @@ A responsive task manager that saves your tasks in the browser using local Stora
  - Categories/Tags
  - Export tasks to JSON
 
- ## Author
-**William Adejoh**
-Frontend Developer
----
-&copy; 2026 ToDo-List Pro. Part of web development portfolio.
+ Built by **William Adejoh** as part of my web development portfolio.

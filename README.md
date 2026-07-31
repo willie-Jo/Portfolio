@@ -29,6 +29,7 @@ I'm actively learning Bootstrap and just getting started with React.
 | [Compound Interest Calculator](./projects/Compound-Interest-Calculator/) | A Responsive web app that calculates compound interest growth year-by-year using a "for loop". | HTML, CSS, JavaScript, Chart.js |
 | [E-commerce Product UI](./projects/E-Commerce-UI/) | A responsive e-commerce product grid. | HTML, CSS, JavaScript |
 | [Chat-Application-UI](./projects/Chat-Application-UI/) | A responsive chat interface built with Vanilla JavaScript. | HTML, CSS, JavaScript |
+| [Learning-Management-System](./projects/Learning-Management-System/) | A modern, responsive Learning Management System dashboard.  | HTML, CSS, JavaScript |
 
 ## PHP, MySQL & WordPress
 *Coming soon*

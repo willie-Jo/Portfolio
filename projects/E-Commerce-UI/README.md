@@ -29,9 +29,6 @@ A responsive e-commerce product grid built with vanilla JavaScript. Features dyn
 ## Screenshot
 ![E-Commerce-UI](screenshot-ecommerce.png)
 
-## Author
-**William Adejoh**
-Frontend Developer
 ---
-&copy; 2026 E-Commerce Product UI/UX. Part of web development portfolio.
+Built by **William Adejoh** as part of my web development portfolio.
 

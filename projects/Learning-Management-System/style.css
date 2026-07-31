@@ -1,0 +1,207 @@
+/*********************************************************************
+* File: style.css
+* Project: LearnHub - Learning Management System UI
+* Author: William Adejoh
+* Description: Handles all styling for the LMS dashboard.
+               Includes theme variables, responsive layout with Grid/Flexbox,
+               Sidebar navigation, stat cards, course cards, and mobile breakpoints.
+***********************************************************************/               
+
+/* =========== BASE & VARIABLES ======== */
+/* For easy theming */
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --accent:#6366f1;
+    --text:#f8fafc;
+    --muted:#94a3b8;
+    --success:#22c55e;
+  }
+  
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{
+    font-family: system-ui, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  
+  /* Main layout */
+  .lms-container{
+    display:flex;
+    min-height:100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar{
+    width:240px;
+    background:#0b1222;
+    padding:24px 16px;
+    display:flex;
+    flex-direction:column;
+  }
+  .sidebar-top{display:flex; align-items:center; justify-content:space-between}
+  .logo{font-size:20px; /*margin-bottom:32px;*/ color:var(--accent)}
+
+   /* Avatar placeholder with gradient */
+   .avatar-placeholder{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),#8b5cf6);
+    font-weight:700;
+    font-size:14px;
+    color:#fff;
+  }
+  .sidebar-nav{margin-top:32px}
+  .sidebar a{
+    display:block;
+    padding:12px 14px;
+    border-radius:10px;
+    color:var(--muted);
+    text-decoration:none;
+    margin-bottom:8px;
+  }
+  .sidebar a.active, .sidebar a:hover{background:var(--card); color:var(--text)}
+  
+  /* Main content area */
+  .main-content{flex:1; padding:16px}
+  .topbar{
+    /*display:flex;
+    justify-content:space-between;
+    align-items:center; */
+    margin-top:24px;
+    padding:10px 0 10px 0;
+  }
+  /*.profile {border-radius:50%}*/
+
+ 
+
+  /* Course thumbnail placeholder */
+  .course-thumb{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:160px;
+    border-radius:16px 16px 0 0;
+    font-weight:700;
+    color:rgba(255,255,255,0.9);
+    font-size:16px;
+  }
+  
+  /* Stats section */
+  .stats{
+    display:flex;
+    flex-wrap:wrap;
+    /*justify-content:center;*/
+    gap:8px;
+    margin-bottom:24px;
+    width:100%;
+  }
+  .stat-card{
+    background:var(--card);
+    padding:12px 16px;
+    border-radius:12px;
+    flex:1 1 0;    /* grow, shrink, base width 160px */
+    min-width:0;
+    text-align:center;
+  }
+  .stat-card h3{
+    font-size:clamp(16px,2.8vw,12px);  /* scales down on small screens */
+    color:var(--accent);
+    margin-bottom:2px;
+    line-height:1.2;
+  }
+  .stat-card p{
+    font-size:clamp(10px,2.8vw,12px); 
+    color:var(--muted); 
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    
+  }
+  
+  /* Grid for Course cards. Auto-fits based on screen size */
+  /*.courses{padding-top:8px}*/
+  .course-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:16px;
+    padding-top:8px;
+  }
+  .course-card{
+    background:var(--card);
+    border-radius:16px;
+    overflow:hidden;       /* Keeps image corners rounded */
+    /*transition: transform .2s;*/
+  }
+  .course-card:hover{transform: translateY(-4px)}
+  /*.course-card img{width:100%; height:160px; object-fit:cover}*/
+  .course-info{padding:14px 16px}
+  .course-info h4{padding-left:4px; margin-bottom:8px; font-size:15px}
+
+  /* Placeholder for course thumbnail when no image */
+  .course-thumb{
+    /*display:flex;
+    align-items:center;
+    justify-content:center; */
+    width:100%; 
+    height:140px; 
+    /*font-weight:700;
+    font-size:18px;
+    color:rgba(255,255,255,0.9);
+    border-radius:16px 16px 0 0*/
+  }
+  
+
+  /* Progress bar container and fill */
+  .progress-bar{
+    height:6px;
+    /*background:#334155;
+    border-radius:8px;
+    margin-top:10px;
+    overflow:hidden;*/
+  }
+  .progress{height:100%; background:var(--success); border-radius:8px}
+
+  /* Mobile + Tablet Responsive  */
+  @media(max-width:900px){
+    .lms-container{flex-direction:column}
+    .sidebar{width:100%; padding:12px 16px; /*border-bottom:1px solid rgba(255,255,255,0.05)*/}
+    .sidebar-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;  /* logo left, avatar right */
+      /*width:100%;*/
+      margin-bottom:10px;
+    } 
+    .sidebar-nav{
+      display:flex; 
+      flex-wrap:wrap;
+      /*margin-top:0; */
+      gap:6px; 
+      /*overflow-x:auto;
+      padding:/*4px 0 8px 0;
+      /*margin:0 -16px;   /* allow full width */
+    }
+    .sidebar a{
+      flex:1 1 auto;  /* allow links to grow and shrink */
+      text-align:center;
+      /*margin-bottom:0;
+      white-space:nowrap;*/
+      background:var(--card);
+      padding:8px 10px;
+      font-size:13px;
+    }
+    .main-content{padding:12px}
+    /*.stat-card{flex:1 1 calc(50% - 8px);}  /* 2 cards per row with gap */
+    /*.sidebar-nav::-webkit-scrollbar{display:none}
+    .stats{display:flex; width:fit-content}*/
+  }
+
+  /*@media(max-width:480px){
+    .stat-card{flex:1 1 100%}  /* 1 card per row 
+  }*/
