@@ -1,101 +1,95 @@
-// Toggle Mobile Menu
-function toggleMenu(btn) {
-    btn.classList.toggle('active');
-    document.getElementById('mainNav').classList.toggle('active');
-}
+/* =======================================================
+* Author: William Adejoh
+* Portfolio Website Main JS
+* v2.5
+* Description:
+* Handles mobile nav toggle, back to top button,
+* scroll spy for active nav, smooth scrolling,
+* avatar lightbox, project filtering, and dragable 
+* Hire-me-button on mobile/tablet screen.
+======================================================== */
 
-// Close menu when a link is click
-document.querySelectorAll('.main-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.getElementById('mainNav').classList.remove('active');
-    });
-});
-
-// Back to Top Button
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-    backToTop.style.display = window.scrollY > 300? 'block' : 'none';
-});
-backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ===== SCROLL SPY - SIMPLE + WORKS =====
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        // -100 accounts for sticky header
-        if (pageYOffset >= sectionTop - 100) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    document.querySelectorAll('.main-nav a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').substring(1) === current) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Smooth scroll for nav links, scroll smoothly instead of jumping
-document.querySelectorAll('.main-nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();  // stop the instant jump
-        const targetId = this.getAttribute('href');  //get #about, #services, #contact, #projects
-        const targetSection = document.querySelector(targetId);
-        targetSection.scrollIntoView({behavior: 'smooth', block: 'start'});
-    });
-});
-
-// Avatar Lightbox
-const modal = document.getElementById("avatarModal");
-const modalImg = document.getElementById("modalImg");
-const avatarLink = document.querySelector(".avatar-link");
-
-avatarLink.onclick = function(e) {
-    e.preventDefault();  // stop opening new tab
-    modal.style.display = "block";
-    modalImg.src = this.href; // uses the large image
-}
-document.querySelector(".close").onclick = () => modal.style.display = "none";
-modal.onclick =  (e) => { if(e.target == modal) modal.style.display = "none";}
-
-// Poject Filters 
 document.addEventListener('DOMContentLoaded', () => {
+    /* ===== 1. MOBILE MENU TOGGLE ===== */
+    window.toggleMenu = (btn) => { // global for onclick
+        btn.classList.toggle('active');
+        document.getElementById('mainNav').classList.toggle('active');
+    };
+
+    document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('mainNav').classList.remove('active');
+            document.querySelector('.hamburger').classList.remove('active');
+        });
+    });
+
+    /* ===== 2. BACK TO TOP ===== */
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        backToTop.style.display = window.scrollY > 300? 'block' : 'none';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ===== 3. SCROLL SPY + SMOOTH SCROLL ===== */
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.main-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector(link.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+        });
+    });
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => { if (pageYOffset >= section.offsetTop - 120) current = section.id });
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+        });
+    });
+
+    /* ===== 4. AVATAR LIGHTBOX ===== */
+    const modal = document.getElementById("avatarModal");
+    const modalImg = document.getElementById("modalImg");
+    document.querySelector(".avatar-link")?.addEventListener('click', (e) => {
+        e.preventDefault(); modal.style.display = "block"; modalImg.src = e.currentTarget.href;
+    });
+    document.querySelector(".close").onclick = () => modal.style.display = "none";
+    modal.onclick = (e) => { if(e.target == modal) modal.style.display = "none";}
+
+    /* ===== 5. PROJECT FILTERS ===== */
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
-    
     filterBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            // 1. Don't do anything if button is disabled
+        btn.addEventListener('click', () => {
             if (btn.disabled) return;
-
-            // 2. Remove active class from all buttons
-            filterBtns.forEach(b => b.classList.remove('active'));
-
-            // 3. Add active to clicked button
-            btn.classList.add('active');
-            
+            filterBtns.forEach(b => b.classList.remove('active')); btn.classList.add('active');
             const filter = btn.dataset.filter;
-            /*const filter = btn.getAttribute('data-filter');*/
-            
-            // 3. Show/hide projects
             projectCards.forEach(card => {
-                const categories = card.dataset.category;  
-
-                if (filter === 'all') {
-                    card.style.display = 'block';
-                } else if (categories && categories.includes(filter)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+                card.style.display = (filter === 'all' || card.dataset.category.includes(filter))? 'flex' : 'none';
             });
         });
     });
-})
+
+    /* ===== 6. DRAGGABLE HIRE ME BUTTON ===== */
+    const dragBtn = document.querySelector('.floating-cta');
+    let isDragging = false, offsetX, offsetY;
+    dragBtn.addEventListener('touchstart', (e) => {
+        isDragging = true; 
+        const touch = e.touches[0];
+        offsetX = touch.clientX - dragBtn.getBoundingClientRect().left;
+        offsetY = touch.clientY - dragBtn.getBoundingClientRect().top;
+    });
+    dragBtn.addEventListener('touchmove', (e) => {
+        if(!isDragging) return; 
+        e.preventDefault();
+        const touch = e.touches[0];
+        dragBtn.style.right = 'auto'; 
+        dragBtn.style.bottom = 'auto';
+        dragBtn.style.left = `${touch.clientX - offsetX}px`;
+        dragBtn.style.top = `${touch.clientY - offsetY}px`;
+    });
+    dragBtn.addEventListener('touchend', () => {
+        isDragging = false;
+        document.body.classList.remove('dragging');
+    });
+});
