@@ -238,12 +238,17 @@ footer{background:var(--dark); color:var(--muted); text-align:center; padding:25
     .main-nav{
         display:none; flex-direction:column; position:absolute;
         top:50px; right:8px; width:calc(100vw - 28px); max-width:220px;
-        background:rgba(11,18,34,0.9); border-radius:0 0 12px 12px; padding:6px; z-index:1000
+        background:rgba(24, 32, 51, 0.9); border-radius:0 0 12px 12px; padding:6px; z-index:1000
     }
     .main-nav a{text-align:center; padding-top:0; margin-top:0}
     .main-nav a:not([href="#contact"]){border-bottom:2px solid var(--bg)}
     .main-nav.active{display:flex}
-    .main-nav a:hover,.main-nav a.active{color:var(--primary-dark); border-bottom:2px solid var(--primary-dark)}
+    .main-nav a:hover,.main-nav a.active{
+        color:var(--primary-dark); 
+        border-bottom:2px solid var(--primary-dark); 
+        border:none;
+        transform:none
+    }
     .hamburger{display:flex}
     section, .hero-profile-wrap, .hero-cover{border-radius:0}
     .contact-links .btn{padding:4px 14px; border-radius:8px; font-weight:300}
