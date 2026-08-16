@@ -1,0 +1,69 @@
+/**
+* File: style.css
+* Description: Main stylesheet for VaultJS, Dark theme, responsive cards.
+* Author: William Adejoh
+**/
+
+/* ======== BASE & VARIABLES =========== */
+
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#e2e8f0;
+    --accent:#38bdf8;
+    --accent-hover:#0ea5e9;
+    --danger:#f87171;
+}
+
+body {
+    font-family:system-ui,-apple-system,sans-serif; 
+    background-color:var(--bg); 
+    margin:0; 
+    padding:2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:var(--text)
+}
+.container {width:100%; max-width:500px}
+.card {background-color:var(--card); padding:2rem; border-radius:12px; box-shadow:0 10px 15px -3px rgba(0, 0, 0, 0.3)}
+.hidden {display:none}    /* used by JS to switch screens */
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2 {color:var(--accent); margin-top:0}
+a {color:var(--accent); cursor:pointer; text-decoration:none}
+a:hover {text-decoration:underline}
+
+/* ===== FORMS & BUTTONS ===== */
+input, button {padding:0.75rem; width:100%; border-radius:8px; font-size:1rem; box-sizing:border-box}
+input {margin-bottom:1rem; border:1px solid #334155; background-color:#334155; color:var(--text)}
+button {border:none; font-weight:bold; background-color:var(--accent); color:var(--bg); cursor:pointer; transition:0.2s}
+button + button {margin-top:0.75rem}
+button:hover {background-color:var(--accent-hover)}
+.btn-secondary {background-color:#475569; color:var(--text); margin-top:0.5rem}
+.btn-danger {background-color:var(--danger)}
+
+/* ===== VAULT LIST ===== */
+#vault-list {list-style:none; padding:0}
+#vault-list li{
+    background-color:#334155;
+    padding:1rem;
+    border-radius:8px;
+    margin-bottom:0.5rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    /*word-break:break-all*/
+}
+.btn-small {width:auto; padding:0.4rem 0.8rem; font-size:0.8rem; margin-left:0.5rem}
+code{background:#0f172a; padding:2px 6px; border-radius:4px; font-size:0.9rem}
+.how-to {font-size:0.9rem; color:#94a3b8; border-left:3px solid var(--accent); padding-left:1rem; margin-top:2rem}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    body {padding:1rem}
+    .card {padding:1.5rem}
+    #vault-list li {flex-direction:column; align-items:flex-start}
+    #vault-list li div:last-child {margin-top:0.5rem}
+}

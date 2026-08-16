@@ -18,6 +18,7 @@ Minified + Clean + Responsive + Twitter Style Hero
 html{scroll-behavior:smooth; font-size:16px; overflow-x:hidden; width:100%}
 body{
     font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:14px;
     background:var(--bg); color:var(--text); line-height:1.6;
     word-wrap:break-word; /* prevents text overflow */
     overflow-wrap:break-word;

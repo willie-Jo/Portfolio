@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaultJS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- SECTION 1: LANDING / INFO -->
+        <div id="landing-info">
+            <div class="card">
+                <h1>VaultJS</h1>
+                <p><b>Your passwords. Encrypted in your browser.</b></p>
+                <p>VaultJS is a zero-knowledge password manager. Your master password never leaves your device.
+                    We only store encrypted gibberish on the server.
+                </p>
+                
+                <div class="how-to">
+                    <h3>How it works:</h3>
+                    <ol>
+                        <li><b>Register:</b> Create account. We generate a unique salt for you.</li>
+                        <li><b>Login:</b> We send your salt back. Your browser turns your password + salt into an encryption key.</li>
+                        <li><b>Vault:</b> All passwords are encrypted/decrypted in your browser using AES-256-GCM before they touch the internet.</li>
+                    </ol>
+                    <p><b>Important:</b> If you forget your master password, we CANNOT recover it.</p>
+                </div>
+                <button onclick="showRegister()" style="margin-top:1rem;">Get Started</button>
+            </div>
+        </div>
+         
+        <!-- SECTION 2: AUTH -->
+        <div id="auth-section" class="hidden">
+            <div class="card">
+                <!-- Register Form-->
+                <div id="register-section">
+                    <h2>Create Account</h2>
+                    <input type="text" id="reg-username" placeholder="Choose Username" required>
+                    <input type="password" id="reg-password" placeholder="Choose Master Password" required>
+                    <button onclick="register()">Register</button>
+                    <p>Already have account? <a href="#" onclick="showLogin()">Login</a></p>
+                </div>
+                
+                <!--Login Form-->
+                <div id="login-section" class="hidden">
+                    <h2>Login to Vault</h2>
+                    <input type="text" id="login-username" placeholder="Username" required>
+                    <input type="password" id="login-password" placeholder="Master Password" required>
+                    <button onclick="login()">Unlock Vault</button>
+                    <p>Need account? <a href="#" onclick="showRegister()">Register</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: VAULT DASHBOARD -->
+    <div id="vault-section" class="hidden">
+        <div class="card">
+            <h2>Your Vault</h2>
+            <p>Generate and manage your passwords. Click "Save Vault" to sync to cloud.</p>
+            <button onclick="generateAndAdd()">Generate New Password</button>
+            <ul id="vault-list"></ul>
+            <button onclick="saveToServer()">Save Vault</button>
+            <button class="btn-secondary" onclick="loadFromServer()">Reload from Cloud</button>
+            <button class="btn-danger" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

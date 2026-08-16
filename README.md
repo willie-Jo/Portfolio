@@ -36,8 +36,9 @@ I'm Focused on turning ideas into real, working pages. I specialize in:
 | [E-commerce Product UI](./projects/E-Commerce-UI/) | Product listing with cart and filters | HTML, CSS, JavaScript |
 | [Chat-Application-UI](./projects/Chat-Application-UI/) | A responsive chat interface built with Vanilla JavaScript. | HTML, CSS, JavaScript |
 | [LMS Dashboard UI](./projects/Learning-Management-System/) | A modern, responsive Learning Management System dashboard.  | HTML, CSS, JavaScript |
+| [VaultJS](./projects/VaultJS-Browser-Password-Manager/) | A simple password manager where your data is encrypted in the browser before it ever touches the server. | HTML, CSS, JavaScript, Web Crypto API, PHP, MySQL |
 
-## PHP, MySQL & WordPress
+## Bootstrap, React, Security & WordPress
 *Coming soon*
 
 ## How to Run Locally
