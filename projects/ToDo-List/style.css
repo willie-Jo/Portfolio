@@ -9,7 +9,7 @@ Includes CSS variables for easy Dark/Light theme switching and responsive layout
     --bg:#f5f5f5;        /* Page background */
     --card:#ffffff;      /* Container background */
     --text:#333;         /* Main text color */
-    --accent:#4f46e5;    /* Button and border colo */
+    --accent:#4f46e5;    /* Button and border color */
     --muted-bg:#f8fafc;   /* Task item background */
 }
 
@@ -154,5 +154,5 @@ header{display:flex; justify-content:space-between; align-items:center; margin-b
         flex:unset;   /* remove flex from mobile */
         width:100%;
     }
-    #taskForm button{whit-space:nowrap;}  /* stop 'Add Task' from wrapping */
+    #taskForm button{white-space:nowrap;}  /* stop 'Add Task' from wrapping */
 }

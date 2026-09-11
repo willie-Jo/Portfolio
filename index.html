@@ -1,411 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Portfolio of Willie Jo, William Adejo, WA, a frontend developer specializing in HTML,CSS, JavaScript and responsive website based in Abuja. Available for freelance work.">
-	<meta name="keywords" content="William Adejoh, frontend developer, web developer Abuja, HTML CSS JavaScript portfolio">
+	
+	<!-- SEO + Social Meta Tags -->
+	<meta name="description" content="Portfolio of William Adejo, Frontend & WordPress Web Developer based in Abuja. Specializing in HTML, CSS, JavaScript, React, PHP & WordPress. Available for freelance work.">
+	<meta name="keywords" content="William Adejoh, frontend developer, wordpress developer, web developer Abuja, HTML CSS JavaScript React PHP portfolio">
 	<meta name="author" content="William Adejoh">
-	<title>William Adejoh | Frontend Developer in Abuja</title>
-	<meta property="og:title" content="Willie Adejoh | Frontend Developer">
-	<meta property="og:description" content="Check out my portfolio projects built with HTML, CSS, and JavaScript.">
-	<meta property="og:url" content="https://willie-jo-portfolio.netlify.app">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="https://willie-jo-portfolio.netlify.app/preview.jpg">
-	<meta name="twitter:card" content="summary_large_image">
-	<!-- Custom css -->
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" href="/favicon.ico">s
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<title>William Adejoh | Frontend & WordPress Developer</title>
+	
+	<!-- System Design Fonts + Icon Packs -->
+	<link rel="preconnect" href="https://googleapis.com">
+	<link href="https://googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cloudflare.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	
+	<!-- Primary Stylesheet Link -->
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header class="site-header">
-		<div class="logo">
-			<h1>WA</h1>
-			<small>FrontEnd & WordPress Web Developer</small>
-		</div>
-		
-		<nav class="main-nav" id="mainNav">
-			<a href="#hero">Home</a>
-			<a href="#about">About</a>
-			<a href="#services">Services</a>
-			<a href="#projects">Projects</a>
-			<a href="#contact">Contact</a>
-		</nav>
-		
-		<!-- Hambuger Button -->
-		<button class="hamburger" aria-label="Toggle Menu" onclick="toggleMenu(this)">
-			<span></span>
-			<span></span>
-			<span></span>
-		</button>
-		
-	</header>
-	<main>
-		<div class="hero-profile-wrap" id="hero">
-			<div class="hero-cover"></div>
-			<div class="hero-profile-content">
-				<div class="avatar-wrap">
-					<a href="profile-large.jpg" class="avatar-link" target="_blank" aria-label="View full profile picture">
-						<img class="profile-image" src="file_000000004c9071f587c73650ccdf693e.jpg" alt="Adejoh" loading="lazy"/>
-					</a>
+	
+	<!-- Hero Section (Canvas) -->
+	<section class="hero-canvas">
+		<div class="hero-internal-container">
+			
+			<!-- Back-Layer Gradient Radial Blur Glow -->
+			<div class="canvas-blob-glow"></div>
+			
+			<!-- Center Stacking Frame (Heading + Profile Avatar) -->
+			<div class="center-composition-stack">
+				<div class="hero-heading">
+					<small>Hi Folks! I'm William</small>
+					<h1>Frontend & WordPress <br><span class="gradient-text">Web Developer</span></h1>
 				</div>
-				<div class="social">
-					<a href="https://wa.me/2348107839478?text=Hi%20William%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you" class="social-btn" id="whatsappBtn" target="_blank" aria-label="WhatsApp" title="WhatsApp">
+				
+				<div class="hero-avatar-frame">
+					<img src="will-i-am.png" alt="William Adejoh Portrait" class="transparent-avatar" width="360" height="400">
+				</div>
+			</div>
+			
+			<!-- Logo + Centered Socials + Stacked Nav Links -->
+			<div class="bottom-horizon-row">
+				<div class="logo">
+					<span class="init">WA</span>
+					<span class="role">DEV</span>
+				</div>
+				
+				<div class="socials">
+					<a href="https://wa.me/2348107839478?text=Hi%20William%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you" target="_blank" aria-label="WhatsApp" title="WhatsApp">
 						<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.953-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-.887 3.23 3.323-.875z"/></svg>
 					</a>
-					<a href="https://linkedin.com/in/williams-adejoh-dev" class="social-btn" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+					<a href="https://linkedin.com/in/williams-adejoh-dev" target="_blank" aria-label="LinkedIn" title="LinkedIn">
 						<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5V8h3zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-4.342c0-1.145-.02-2.62-1.6-2.62-1.6 0-1.846 1.255-1.846 2.555V19h-3V8h2.88v1.306c.4-.761 1.38-1.564 2.84-1.564 3.04 0 3.6 2 3.6 4.59V19z"/></svg>
 					</a>
-					<a href="mailto:willie.adj@gmail.com" class="social-btn" aria-label="Email" title="Email">
+					<a href="mailto:willie.adj@gmail.com" aria-label="Email" title="Email">
 						<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.557a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 6.052a3 3 0 003.144 0L22.5 6.908z"/></svg>
 					</a>
-					<a href="https://github.com/willie-Jo" class="social-btn" target="_blank" aria-label="GitHub" title="GitHub">
+					<a href="https://github.com/willie-Jo" target="_blank" aria-label="GitHub" title="GitHub">
 						<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-11.703z"/></svg>
 					</a>
 				</div>
 				
-				<div class="hero-profile-intro">
-					<h1>William Adejoh</h1>
-					<h3>FrontEnd &amp; WordPress Web Developer</h3>
-					<p>
-						Welcome to my portfolio website where i showcase my projects and skills. <br> 
-						I build fast, clean, and responsive websites that help businesses look professional and get results.
-						Whether it's a custom site with HTML, CSS & JavaScript, or a WordPress website you can manage yourself, 
-						I focus on clean code, great UX, and designs that work on every device.
-					</p>
-				</div>
-			</div>
-		</div>
-		<section id="about">
-			<h2>About Me</h2>
-			<div class="about-grid">
-				<div class="about-text">
-					<p>
-						I'm William, an aspiring web Developer currently focused on Frontend Development and WordPress website Design based in Abuja, Nigeria. 
-						I started building websites because i love turning ideas into real, working pages.
-					</p>
-					<p>
-						My approach is simple: learn by building, ship clean code, and make websites that are easy to use.
-						I specialize in responsive design, WordPress customization, and creating custom UI components with vanilla JavaScript.
-					</p>
-					<p>
-						When i'm not coding, i'm learning new tools and improving my workflow so i can deliver better websites, faster.
-					</p>
-				</div>
-				
-				<div class="skill-box">
-					<h4>🛠️ My Tech Stack & Tools: </h4>
-					<ul>
-						<li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+)</li>
-						<li><strong>CMS:</strong> WordPress (Customization & Page Builders)</li>
-						<li><strong>Backend & DB:</strong> PHP, MySQL with XAMPP</li>
-						<li><strong>Tools:</strong> VSCODE,Sublime Text, Git, GitHub</li>
-						<li><strong>Focus:</strong> Responsive Design, UI/UX, Performance</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		
-		<section id="services">
-			<h2>💼 Services I Offer</h2>
-			<div class="services-grid">
-				<div class="services-card">
-					<h3>WordPress Website Design</h3>
-					<p>Professional WordPress websites for businesses and personal brands. Mobile-friendly, SEO-ready, and easy for you to update yourself.</p>
-				</div>
-				<div class="services-card">
-					<h3>Responsive Website Development</h3>
-					<p>Custom website pages and layouts using HTML, CSS, and JavaScript. Pixel-perfect layouts that look great on phone, tablet, and desktop.</p>
-				</div>
-				<div class="services-card">
-					<h3>Landing Page & UI Components</h3>
-					<p>High-converting landing pages, product pages, and reusable UI components. Built for speed and conversions.</p>
-				</div>
-				<div class="services-card">
-					<h3>Website Maintenance & Updates</h3>
-					<p>Keep your site secure and updated by making content changes, bug fixes, speed optimization, and plugin management.</p>
-				</div>
-				<div class="services-card">
-					<h3>Basic PHP & MySQL Development</h3>
-					<p>Simple dynamic website features such as forms, data handling, and database-driven functionality to make your site work the way you need.</p>
-				</div>
-			</div>
-		</section>
-		
-		<section id="projects">
-			<div class="container">
-				<h2>Projects I've Built</h2>
-				<p>From vanilla JS to full-stack. Here's what i can build.</p>
-				
-				<!-- Filter Buttons -->
-				<div class="filter-buttons">
-					<button class="filter-btn active" data-filter="all">All</button>
-					<button class="filter-btn" data-filter="html-css">HTML/CSS</button>
-					<button class="filter-btn" data-filter="vanilla">Vanilla JS</button>
-					<button class="filter-btn" data-filter="php-mysql">PHP/MySQL</button>
-					<button class="filter-btn" data-filter="api">API</button>
-					<button class="filter-btn" data-filter="bootstrap" disabled>Bootstrap</button>
-					<button class="filter-btn" data-filter="react" disabled>React</button>
-					<button class="filter-btn" data-filter="security " disabled>Security</button>
-					<button class="filter-btn" data-filter="wordpress" disabled>WordPress</button>
-				</div>
-				
-				<!-- Project Grid -->
-				<div class="projects-grid" id="projects-grid">
-					<!-- 1. HTML/CSS ONLY -->
-					<div class="project-card" data-category="html-css">
-						<img src="projects/FacebookClone/screenshot-mobile.png" alt="facebook Login Clone Preview">
-						<div class="project-info">
-							<h3>Facebook Login Clone</h3>
-							<p>Responsive login page clone using HTML + CSS. Mobile-first layout with Facebook colors.</p>
-							<span class="tech">HTML5, CSS3</span>
-							<div class="project-links">
-								<a href="projects/FacebookClone/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/FacebookClone" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="html-css">
-						<img src="projects/SaaS-Product-Landing-Page/screenshot-desktop.png" alt="SaaS Product Landing Page">
-						<div class="project-info">
-							<h3>SaaS Product landing page</h3>
-							<p>1-screen modern Saas/Product landing page. Glassy, clean, mobile-first.</p>
-							<span class="tech">HTML, CSS3</span>
-							<div class="project-links">
-								<a href="projects/SaaS-Product-Landing-Page/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/SaaS-Product-Landing-Page" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="html-css">
-						<img src="projects/Ink-Landing-Page/screenshot-desktop.png" alt="Ink Landing Page">
-						<div class="project-info">
-							<h3>Ink Landing Page</h3>
-							<p>Responsive single-page template with CSS-only auto carousel and sticky nav.</p>
-							<span class="tech">HTML, CSS3</span>
-							<div class="project-links">
-								<a href="projects/Ink-Landing-Page/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Ink-Landing-Page" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<!-- 2. VANILLA JS -->
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/calculator-project/calculator-preview.png" alt="Glassmorphism Calculator">
-						<div class="project-info">
-							<h3>Glassmorphism Calculator</h3>
-							<p>A responsive calculator with dark/light mode, keyboard support, and calculation history. Built with Vanilla JS.</p>
-							<span class="tech">HTML, CSS, JavaScript</span>
-							<div class="project-links">
-								<a href="projects/calculator-project/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/calculator-project" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/Survey-Form/screenshot-surveyForm.png" alt="survey form">
-						<div class="project-info">
-							<h3>Survey Form</h3>
-							<p>Accessible feedback form with validation</p>
-							<span class="tech">HTML, CSS, JavaScript</span>
-							<div class="project-links">
-								<a href="projects/Survey-Form/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Survey-Form" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/ToDo-List/Screenshot-ToDo-List-pro.png" alt="To-Do App">
-						<div class="project-info">
-							<h3>To-Do List</h3>
-							<p>A responsive ToDo App with dark/light mode. Add, delete, and save tasks using LocalStorage</p>
-							<span class="tech">HTML, CSS, JavaScript</span>
-							<div class="project-links">
-								<a href="projects/ToDo-List/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/ToDo-List" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/Image-Slider/Screenshot-image-slider.png" alt="Image Slider">
-						<div class="project-info">
-							<h3>Image Slider</h3>
-							<p>A responsive, auto-playing image slider built with Vanilla HTML,CSS, and JavaScript.</p>
-							<span class="tech">HTML, CSS, JavaScript</span>
-							<div class="project-links">
-								<a href="projects/Image-Slider/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Image-Slider" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/Expense-Tracker/Screenshot-expense-tracker.png" alt="Expense Tracker">
-						<div class="project-info">
-							<h3>Expense Tracker</h3>
-							<p>A Responsive, simple personal finance tracker built with Vanilla HTML, CSS, and JavaScript. </p>
-							<span class="tech">HTML, CSS, JavaScript</span>
-							<div class="project-links">
-								<a href="projects/Expense-Tracker/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Expense-Tracker" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/E-Commerce-UI/screenshot-ecommerce.png" alt="E-commerce product ui">
-						<div class="project-info">
-							<h3>E-commerce Product UI</h3>
-							<p>
-								Responsive product listing and product detail page with cart, filters, and wishlist UI. 
-								Built mobile-first with pure HTML, CSS, and JavaScript.
-							</p>
-							<span class="tech">HTML, CSS, JavaScript</span>
-							<div class="project-links">
-								<a href="projects/E-Commerce-UI/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/E-Commerce-UI" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/Chat-Application-UI/screenshot-chatApp.png" alt="Chat app ui">
-						<div class="project-info">
-							<h3>Real-time Chat Application UI</h3>
-							<p>
-								A responsive chat interface built with Vanilla JavaScript. Simulates real-time messaging 
-								with auto-replies, typing indicators, and clean message bubbles.
-							</p>
-							<span class="tech">HTML, CSS, JavaScript</span>
-							<div class="project-links">
-								<a href="projects/Chat-Application-UI/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Chat-Application-UI" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/Compound-Interest-Calculator/screenshot-compound-interest.png" alt="compound interest calculator">
-						<div class="project-info">
-							<h3>Compound Interest</h3>
-							<p>
-								A Responsive web app that calculates compound interest growth year-by-year using a "for loop". It validates user 
-								input and visualizes growth with an interactive Chart.js graph.  
-							</p>
-							<span class="tech">HTML, CSS, JavaScript, Chart.js</span>
-							<div class="project-links">
-								<a href="projects/Compound-Interest-Calculator/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Compound-Interest-Calculator" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<div class="project-card" data-category="vanilla">
-						<img src="projects/Learning-Management-System/screenshot-LMS-UI.png" alt="LMS">
-						<div class="project-info">
-							<h3>Learning Management System UI</h3>
-							<p>
-								A modern, responsive Learning Management System dashboard built with HTML5, CSS3, and Vanilla JavaScript.  
-							</p>
-							<span class="tech">HTML, CSS, JavaScript</span>
-							<div class="project-links">
-								<a href="projects/Learning-Management-System/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Learning-Management-System" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-					<!-- 3. VANILLA + API -->
-					<div class="project-card" data-category="vanilla api">
-						<img src="projects/Weather-App/Screenshot-weatherApp.png" alt="Weather App">
-						<div class="project-info">
-							<h3>Weather App</h3>
-							<p>A responsive weather application that fetches real-time data from OpenWeather API.</p>
-							<span class="tech">HTML, CSS, JavaScript, OpenWeather API</span>
-							<div class="project-links">
-								<a href="projects/Weather-App/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Weather-App" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
+				<div class="nav-links">
 
-					<div class="project-card" data-category="vanilla php-mysql">
-						<img src="projects/VaultJS-Browser-Password-Manager/Screenshot-vaultjs.jpg" alt="vaultjs">
-						<div class="project-info">
-							<h3>VaultJS - Zero-Knowledge Password Manager</h3>
-							<p>A simple User password manager where your data is encrypted in the browser before it ever touches
-								the server. The server only stores encrypted data.
-							</p>
-							<span class="tech">HTML, CSS, JavaScript, Web Crypto API, PHP, MySQL</span>
-							<div class="project-links">
-								<a href="projects/VaultJS-Browser-Password-Manager/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
-								<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/VaultJS-Browser-Password-Manager" target="_blank" class="project-btn code-btn btn-secondary">GitHub &rarr;</a>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</section>
-		
-		<section id="contact">
-			<h2>Let's Work Together</h2>
-			<div class="contact-content">
-				<p>
-					Have a project in mind? I'm currently available for freelance work and new opportunities.
-				</p>
-				<p>
-					Whether you need a new WordPress website, a custom landing page, or help updating your current site,
-					i'd love to hear from you. I typically respond within 24 hours.
-				</p>
-				
-				<div class="contact-links">
-					<a href="https://wa.me/2348107839478?text=Hi%20William%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you" class="btn btn-primary" target="_blank" title="WhatsApp">
-						<i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+					<button id="themeToggle" class="theme-toggler-btn" aria-label="Toggle visual theme mode" title="Change Theme Layout">
+						<i class="fa-solid fa-moon"></i>
+					</button>
+					<a href="#projects">
+						<span class="btn-outline">View Projects</span> 
+						<span class="arrow">&rarr;</span>
 					</a>
-					<a href="mailto:willie.adj@gmail.com" class="btn code-btn" target="_blank" title="WhatsApp">
-						<i class="fa-solid fa-envelope"></i> Send an Email
+					<a href="#contact">
+						<span class="btn-outline">Contact</span> 
+						<span class="arrow">&rarr;</span>
 					</a>
 				</div>
 			</div>
-		</section>
-		
-		<a class="hire-me-btn floating-cta" href="https://wa.me/2348107839478?text=Hi%20William%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you" target="_blank">Hire me</a>
-		<button id="backToTop">&uarr; Top</button>
-		
-		<!-- Lightbox for Avatar -->
-		<div id="avatarModal" class="modal">
-			<span class="close">&times;</span>
-			<img class="modal-content" id="modalImg">
 		</div>
-	</main>
+	</section>
 	
-	<footer>
-		<div class="footer-social social">
-			<a href="https://wa.me/2348107839478" target="_blank" aria-label="WhatsApp" title="Whatsapp">
-				<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.953-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-.887 3.23 3.323-.875z"/></svg>
-			</a>
-			<a href="https://linkedin.com/in/williams-adejoh-dev" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-				<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5V8h3zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-4.342c0-1.145-.02-2.62-1.6-2.62-1.6 0-1.846 1.255-1.846 2.555V19h-3V8h2.88v1.306c.4-.761 1.38-1.564 2.84-1.564 3.04 0 3.6 2 3.6 4.59V19z"/></svg>
-			</a>
-			<a href="mailto:willie.adj@gmail.com" aria-label="Email" title="Email">
-				<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.557a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 6.052a3 3 0 003.144 0L22.5 6.908z"/></svg>
-			</a>
-			<a href="https://github.com/willie-Jo" target="_blank" aria-label="GitHub" title="GitHub">
-				<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-11.703z"/></svg>
-			</a>
+	<!-- Infinite Horizontal Running Marquee (Services) -->
+	<div class="services-bar">
+		<div class="services-track">
+			<span>Frontend Dev<i>+</i>Responsive Design(UI/UX)<i>+</i> WordPress(CMS) <i>+</i>PHP/MySQL<i>+<!--</i>Elementor<i>+</i>WooCommerce<i>+</i>React<i>+</i>--></span>
+			<span>Frontend Dev<i>+</i>Responsive Design(UI/UX)<i>+</i> WordPress(CMS) <i>+</i>PHP/MySQL<i>+<!--</i>Elementor<i>+</i>WooCommerce<i>+</i>React<i>+</i>--></span>
+			<span>Frontend Dev<i>+</i>Responsive Design(UI/UX)<i>+</i> WordPress(CMS) <i>+</i>PHP/MySQL<i>+<!--</i>Elementor<i>+</i>WooCommerce<i>+</i>React<i>+</i>--></span>
 		</div>
-		<small class="copyright">
-			© 2026 William Adejoh. Based in Abuja, Nigeria.<br>
-			Designed & Developed with HTML, CSS & Vanilla JavaScript.
-		</small>
+	</div>
+	
+	<!-- About Section -->
+	<section class="intro container">
+		<h2>"Turning Ideas into <span class="highlight">Fast & Beautiful</span> Websites"</h2>
+		<p class="subtitle">I build fast, responsive websites for startups and businesses. From pixel-perfect UI to clean, SEO-ready code.</p>
+		<p>I'm William Adejo, a Frontend & WordPress Web Developer based in Abuja, Nigeria. I started building websites because I love turning ideas into real, working pages.</p>
+		<p>My approach is simple: learn by building, ship clean code, and make websites that are easy to use. I specialize in responsive design, WordPress customization, and custom UI components with vanilla JavaScript.</p>
+	</section>
+	
+	<!-- Tech Modules Section -->
+	<section class="tools container">
+		<h3>Techs/Softwares I've worked on</h3>
+		<div class="tools-grid">
+			<div class="tool-land-page tool"><i class="fa-brands fa-html5"></i>HTML5</div>
+			<div class="tool-land-page tool"><i class="fa-brands fa-css3-alt"></i>CSS3</div>
+			<div class="tool-land-page tool"><i class="fa-brands fa-js"></i>JavaScript ES6</div>
+			<div class="tool-land-page tool"><i class="fa-brands fa-wordpress"></i>WordPress</div>
+			<div class="tool-land-page tool"><i class="fa-brands fa-php"></i>PHP</div>
+			<div class="tool-land-page tool start-col-2"><i class="fa-brands fa-database"></i>MySQL</div>
+			<!--<div class="tool-land-page tool"><i class="fa-brands fa-react"></i>React.js</div>-->
+			<div class="tool-land-page tool"><i class="fa-brands fa-github"></i>Git controls</div>
+		</div>
+	</section>
+	
+	<!-- Projects Show Case Section -->
+	<section class="projects-land-page container" id="projects">
+		<h2><i>+</i> Projects Showcase <i>+</i></h2>
+		<div class="project-grid">
+			
+			<!-- Project Card 1 -->
+			<div class="project-card">
+				<div class="project-img-container">
+					<img src="screenshot-LMS-UI.png" class="project-img" alt="LMS Portal Preview">
+				</div>
+				<div class="project-info">
+					<h4>01. Learning Management System UI</h4>
+					<div class="tech">
+						<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+					</div>
+					<div class="project-links">
+						<a href="projects/Learning-Management-System/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
+						<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Learning-Management-System" target="_blank" class="btn code-btn">GitHub &rarr;</a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Project Card 2 -->
+			<div class="project-card">
+				<div class="project-img-container">
+					<img src="Screenshot-expense-tracker.png" class="project-img" alt="Expense Tracker Preview">
+				</div>
+				<div class="project-info">
+					<h4>02. Expense Tracker</h4>
+					<div class="tech">
+						<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+					</div>
+					<div class="project-links">
+						<a href="projects/Expense-Tracker/index.html" class="project-btn btn btn-primary" target="_blank">Demo &rarr;</a>
+						<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Expense-Tracker" target="_blank" class="btn code-btn">GitHub &rarr;</a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Project Card 3 -->
+			<div class="project-card">
+				<div class="project-img-container">
+					<img src="Screenshot-weatherApp.png" class="project-img" alt="Weather Application Preview">
+				</div>
+				<div class="project-info">
+					<h4>03. Weather App</h4>
+					<div class="tech">
+						<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">OpenWeather API</span>
+					</div>
+					<div class="project-links">
+						<a href="projects/Weather-App/index.html" class="btn btn-primary" target="_blank">Demo &rarr;</a>
+						<a href="https://github.com/willie-Jo/Portfolio/tree/main/projects/Weather-App" target="_blank" class="btn code-btn">GitHub &rarr;</a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="projects-bottom-cta">
+			<a href="projects.html" class="btn btn-primary" target="_blank">View More Projects &rarr;</a>
+		</div>
+	</section>
+	
+	<!-- BackToTop Floating Interactive Button -->
+	<button id="backToTop" aria-label="Scroll back to top of page">&uarr; Top</button>
+	
+	<!-- Brand Footer Panel -->
+	<footer id="contact">
+		<div class="foot-top">
+			<div class="logo">
+				<span class="init">WA</span> 
+				<span class="role">DEV</span>
+			</div>
+			<div class="socials">
+				<a href="https://wa.me/2348107839478?text=Hi%20William%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20to%20hire%20you" target="_blank" aria-label="WhatsApp" title="WhatsApp">
+					<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.953-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-.887 3.23 3.323-.875z"/></svg>
+				</a>
+				<a href="https://linkedin.com/in/williams-adejoh-dev" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+					<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5V8h3zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-4.342c0-1.145-.02-2.62-1.6-2.62-1.6 0-1.846 1.255-1.846 2.555V19h-3V8h2.88v1.306c.4-.761 1.38-1.564 2.84-1.564 3.04 0 3.6 2 3.6 4.59V19z"/></svg>
+				</a>
+				<a href="mailto:willie.adj@gmail.com" aria-label="Email" title="Email">
+					<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.557a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 6.052a3 3 0 003.144 0L22.5 6.908z"/></svg>
+				</a>
+				<a href="https://github.com/willie-Jo" target="_blank" aria-label="GitHub" title="GitHub">
+					<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-11.703z"/></svg>
+				</a>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>Copyright © 2026, All Rights Reserved</p>
+		</div>
 	</footer>
 	<script type="text/javascript" src="portfolio.js"></script>
 </body>
