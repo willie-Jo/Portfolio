@@ -1,0 +1,121 @@
+/**
+ * File: style.css
+ * Project: QuickMart React - E-Commerce UI (Offline-First Build)
+ * Built With: React + CSS3 (Variables, Grid, Flexbox, Transitions)
+ * Description: Light marketplace theme for QuickMart. Uses CSS variables for theming,
+ * Grid for product layout, Flex for header/filters, and transitions for hover effects.
+ * Author: William Adejoh 
+ */
+
+/* theme variables & base */
+:root {
+    --paper:#fefcf7; 
+    --ink:#1a1a1a;
+    --line:#e8e2d9;
+    --accent:#ff6b35;
+    --accent-soft:#fff0e8;
+    --card:#ffffff;
+}
+
+*{box-sizing:border-box; margin:0; padding:0}
+
+body {
+    font-family:ui-sans-serif, system-ui, sans-serif;
+    padding:24px;
+    color:var(--ink);
+    background:var(--paper)
+}
+
+/* header */
+.qm-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1100px;
+    margin:0 auto 24px
+}
+.qm-header h1{
+    font-size:26px;
+    font-weight:800;
+    letter-spacing:-0.5px
+}
+.qm-cart {
+    background:var(--ink);
+    color:var(--paper);
+    padding:8px 14px;
+    border-radius:20px;
+    font-weight:700;
+    font-size:14px
+}
+
+/* hero section */
+.qm-hero {max-width:1100px; margin:0 auto 20px}
+.qm-hero h2 {font-size:32px; font-weight:800; line-height:1.1}
+.qm-hero p {color:#6b6b6b; margin-top:8px; font-size:15px}
+
+/* filter chips */
+.qm-filters {max-width:1100px; margin:0 auto 20px; display:flex; gap:10px}
+.qm-chip {
+    padding:8px 16px; 
+    border:1px solid var(--line);
+    background:var(--card);
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:600
+}
+.qm-chip.active {
+    background:var(--accent-soft);
+    border-color:var(--accent);
+    color:var(--accent)
+}
+.qm-chip:hover {border-color:var(--ink)}
+
+.qm-grid {
+    max-width:1100px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
+    gap:18px;
+    margin:0 auto;
+}
+
+/* card */
+.qm-card {
+    background:var(--card);
+    padding:14px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    position:relative;
+    transition:transform.18s, box-shadow.18s
+}
+.qm-card:hover {transform:translateY(-3px); box-shadow:0 8px 24px rgba(0, 0, 0, .06)}
+.qm-badge {
+    position:absolute; 
+    top:12px; 
+    right:12px; 
+    background:var(--ink); 
+    color:var(--paper); 
+    font-size:10px; 
+    padding:4px 8px; 
+    border-radius:10px
+}
+.qm-card h3 {margin:6px 0 4px; font-size:16px}
+.qm-desc {color:#7a7a7a; font-size:13px; margin-bottom:10px}
+.qm-price {font-weight:800; font-size:16px; margin-bottom:10px}
+.qm-btn {
+    width:100%; 
+    padding:10px; 
+    border:none; 
+    border-radius:10px; 
+    background:var(--ink); 
+    color:var(--paper); 
+    font-weight:700; 
+    cursor:pointer
+}
+.qm-btn:hover {background:var(--accent)}
+
+/* Responsive design */
+@media(max-width:600px) {
+    body{padding:16px}
+    .qm-hero h2 {font-size:24px}
+    .qm-grid{grid-template-columns:repeat(2. 1fr); gap:12px}
+}

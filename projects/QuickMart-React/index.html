@@ -1,0 +1,90 @@
+<!-- 
+    Project: QuickMart React - E-Commerce UI (Offline-First Build)
+    Built with: React (Offline Custom Engine) + HTML5 + CSS3
+    Description: Root HTML file that bootstraps React. Contains an inline offline React engine
+                 (window.React & window.ReactDOM) so the app runs with zero internet, zero CDN, zero build tools.
+                 When online, this inline engine is replaced with real react.production files in /libs.
+    Author: William Adejoh             
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickMart React</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+     1. React Core - engine that creates components 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+     2. ReactDOM - tool that puts React into HTML 
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+     3. Babel - The translator. Browser's don't understand JSX, Babel converts JSX to normal JS 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+</head>
+<body>
+    <!-- root container - React will render all UI inside this div -->
+    <div id="root"></div>
+
+    <!-- OFFLINE ENGINE: This makes React work without internet -->
+    <!-- When you go online later, we will replace this with 2 real React files -->
+    <script>
+        // global React Object on window (browser built-in global object)
+        window.React = {
+            // createElement - built-in React method that creates a DOM element or calls a component function
+            // tag: string like "div" or function like ProductCard
+            // props: object of attributes
+            // ...children: rest parameter (built-in js syntax)
+            createElement: (tag, props, ...children) => {
+                // check if tag is a function using typeof
+                if (typeof tag === 'function') return tag({...props,children});  // ... spread operator clones prop
+
+                // create html element
+                const el = document.createElement(tag);
+                if (props) {
+                    // loop through props to apply attributes and events
+                    for (let k in props) {
+                        if (k === 'className') el.className = props[k];    // set css class
+                        else if (k.startsWith('on')) el.addEventListener(k.slice(2).toLowerCase(), props[k]);
+                        else if (k!== 'children') el.setAttribute(k, props[k]);
+                    }
+                }
+                // flat() - built-in array method flatten children array and loop with forEach
+                children.flat().forEach(c => {
+                    el.appendChild(typeof c === 'string'? document.createTextNode(c) : c);
+                });
+                return el;
+            },
+            // useState - built-in React hook gives component memory
+            useState: (initial) => {
+                let state = initial;      // stores current state value
+                const setState = (newVal) => {
+                    state = newVal;
+                    window._rerender();     // _rerender - custom global function
+                };
+                return [state, setState];    // array destructuring used to get and set value
+            }
+        };
+
+        // ReactDOM - built-in ReactDOM object mounts React into browser DOM
+        window.ReactDOM = {
+            createRoot: (container) => ({
+                render: (element) => {
+                    // saved render function globally so useState can call it
+                    window._rerender = () => {
+                        container.innerHTML = '';
+                        container.appendChild(element);
+                    };
+                    window._rerender();
+                }
+            })
+        };
+    </script>
+
+    <!-- type="text/babel" tells Babel to translate file before running it
+    <script type="text/babel" src="app.js"></script> -->
+    <script src="app.js"></script>
+</body>
+</html>
