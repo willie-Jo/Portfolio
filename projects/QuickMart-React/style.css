@@ -31,21 +31,31 @@ body {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    max-width:1100px;
-    margin:0 auto 24px
+    flex-wrap:nowrap;
+    gap:12px;
+    padding:16px;
+    /*max-width:1100px;
+    margin:0 auto 24px*/
 }
 .qm-header h1{
-    font-size:26px;
-    font-weight:800;
-    letter-spacing:-0.5px
+    font-size:clamp(18px, 4vw,22px);  /* shrinks on mobile */
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    flex:1 1 auto;
+    margin:0;
+    /*font-weight:800;
+    letter-spacing:-0.5px*/
 }
 .qm-cart {
     background:var(--ink);
     color:var(--paper);
-    padding:8px 14px;
+    padding:6px 12px;
     border-radius:20px;
-    font-weight:700;
-    font-size:14px
+    font-weight:600;
+    font-size:14px;
+    white-space:nowrap;
+    flex:0 0 auto;   /* cart never shrinks or wrap */
 }
 
 /* hero section */
@@ -118,4 +128,9 @@ body {
     body{padding:16px}
     .qm-hero h2 {font-size:24px}
     .qm-grid{grid-template-columns:repeat(2. 1fr); gap:12px}
+}
+
+@media(max-width:380px) {
+    .qm-header h1 {font-size:14px}
+    .qm-cart {padding:4px 10px; font-size:12px}
 }
