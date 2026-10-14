@@ -1,0 +1,65 @@
+/**
+* Project: ShopTracker - Simple Inventory Management System
+* File: style.css
+* Version: 1.0.0
+* Description: Central stylesheet for all UI.
+* Dependencies: login page, dashboard layout, stats cards, tables, buttons.
+* Author: William Adejoh
+*/
+
+/* BASE */
+*{margin:0; padding:0; box-sizing:border-box; font-family:"Segoe UI", sans-serif}
+
+/* LOGIN PAGE */
+.login-body{
+    background:#0f172a; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:center; 
+    align-items:center; 
+    height:100vh
+}
+.login-body h2{color:#ddd; margin-bottom: 30px}
+.login-box{background:white; padding:30px; border-radius:16px; width:360px; box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+.login-box small{margin-bottom:5px}
+.login-box p.sub{color:#64748b; margin-bottom:15px; font-size:14px}
+.login-box input,.login-box button{display: block; width:100%; padding:12px; border-radius:8px;}
+.login-box input{margin:8px 0; border:1px solid #ddd}
+.login-box button{margin-top:12px; border:1px solid #0f172a; background:#0f172a; color:white; cursor:pointer; font-weight:bold}
+.login-box button:hover{background:#1e293b}
+.error{color:#ef4444; background:#fee2e2; padding:8px; border-radius:6px; font-size:13px; margin-bottom:10px}
+
+/* DASHBOARD */
+body{background:#f4f6f9}
+.header {
+    background:#1e293b; 
+    color:white; 
+    padding:15px 30px; 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center
+}
+.header a{color:#f87171; text-decoration:none}
+.stats{display:grid; grid-template-columns:repeat(3,1fr); gap:15px; padding:20px 30px}
+.stat{background:white; padding:15px; border-radius:10px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.5)}
+.stat h3{font-size:28px; color:#0f172a}
+.stat p{color:#64748b}
+.container{padding:0 30px 30px 30px; display:grid; grid-template-columns:1fr 2fr; gap:20px}
+.card {background:white; padding:20px; border-radius:12px; /*text-align:center;*/ box-shadow:0 4px 10px rgba(0, 0, 0, 0.05)}
+.card input,.card button{width:100%; padding:10px; margin:6px 0; border-radius:8px}
+.card input{border:1px solid #ddd}
+.card button{border:1px solid #0f172a; background:#0f172a; color:white; cursor:pointer}
+.card button:hover{background:#334155}
+.search-row{display:flex; gap:10px; margin-bottom:15px}
+.search-row input{flex:1; margin:0}
+.search-row button{width:120px; margin:0}
+table{border-collapse:collapse; width:100%; margin-top:10px}
+th{background:#f8fafc; text-align:left}
+td{border-top:1px solid #eee}
+th,td{padding:10px}
+.low,.ok{color:white; padding:3px 8px; border-radius:12px; font-size:12px}
+.low{background:#ef4444}
+.ok{background:#22c55e}
+.btn{display:inline-block; padding:5px 10px; border-radius:6px; text-decoration:none; font-size:13px}
+.sell{background:#3b82f6; color:white}
+.del{background:#fee2e2; color:#ef4444}
